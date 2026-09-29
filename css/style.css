@@ -197,6 +197,52 @@ h2 {
   width: 48%;
 }
 
+/* Профиль */
+
+.profile-top {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #ffd54f;
+  margin-right: 15px;
+}
+
+.profile-top h1 {
+  margin: 0;
+}
+
+.profile-top p {
+  margin: 5px 0 0;
+  color: #666666;
+}
+
+.profile-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.profile-table td {
+  padding: 8px 4px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.profile-table tr:last-child td {
+  border-bottom: none;
+}
+
+.profile-table td:first-child {
+  color: #666666;
+}
+
+.profile-table td:last-child {
+  text-align: right;
+}
+
 /* Футер */
 
 .footer {
