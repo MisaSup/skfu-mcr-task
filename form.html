@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Анкета | Звездочёты</title>
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <a class="header-logo" href="index.html">
+        <img src="img/logo.svg" alt="логотип">
+        <div>
+          Звездочёты
+          <span>клуб любителей астрономии</span>
+        </div>
+      </a>
+      <nav class="nav">
+        <a href="index.html">Главная</a>
+        <a href="profile.html">Профиль</a>
+        <a class="active" href="form.html">Анкета</a>
+      </nav>
+    </header>
+
+    <main class="content">
+      <h1>Анкета</h1>
+      <p>Поля со звёздочкой <span class="required">*</span> обязательны.</p>
+
+      <form class="form" action="profile.html">
+        <fieldset class="card">
+          <h2>Основное</h2>
+
+          <label for="name">Имя <span class="required">*</span></label>
+          <input type="text" id="name" name="name" placeholder="Иван" required>
+
+          <label for="nickname">Прозвище</label>
+          <input type="text" id="nickname" name="nickname" placeholder="Звездочёт">
+
+          <label for="email">Email <span class="required">*</span></label>
+          <input type="email" id="email" name="email" placeholder="name@mail.ru" required>
+
+          <label for="password">Пароль <span class="required">*</span></label>
+          <input type="password" id="password" name="password" minlength="6" required>
+
+          <label for="age">Возраст</label>
+          <input type="number" id="age" name="age" min="1" max="100">
+
+          <label for="birthday">Дата рождения</label>
+          <input type="date" id="birthday" name="birthday">
+        </fieldset>
+
+        <fieldset class="card">
+          <h2>Про астрономию</h2>
+
+          <label for="constellation">Любимое созвездие</label>
+          <select id="constellation" name="constellation">
+            <option value="orion">Орион</option>
+            <option value="ursa">Большая Медведица</option>
+            <option value="cassiopeia">Кассиопея</option>
+            <option value="cygnus">Лебедь</option>
+            <option value="lyra">Лира</option>
+          </select>
+
+          <label>Есть ли у вас телескоп?</label>
+          <input type="radio" id="yes" name="telescope" value="yes">
+          <label class="inline" for="yes">Да</label>
+          <input type="radio" id="no" name="telescope" value="no" checked>
+          <label class="inline" for="no">Нет</label>
+          <input type="radio" id="want" name="telescope" value="want">
+          <label class="inline" for="want">Хочу купить</label>
+
+          <label>Что вам интересно?</label>
+          <input type="checkbox" id="planets" name="interests" value="planets">
+          <label class="inline" for="planets">Планеты</label>
+          <input type="checkbox" id="stars" name="interests" value="stars">
+          <label class="inline" for="stars">Созвездия</label>
+          <input type="checkbox" id="photo" name="interests" value="photo">
+          <label class="inline" for="photo">Астрофото</label>
+
+          <label for="about">О себе</label>
+          <textarea id="about" name="about" placeholder="Почему вы хотите в клуб?"></textarea>
+        </fieldset>
+
+        <input type="checkbox" id="agree" name="agree" required>
+        <label class="inline" for="agree">Согласен на обработку данных <span class="required">*</span></label>
+
+        <div class="buttons">
+          <input class="button button-light" type="reset" value="Очистить">
+          <input class="button" type="submit" value="Отправить">
+        </div>
+      </form>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-logo">
+        <img src="img/logo.svg" alt="логотип"> Звездочёты
+      </div>
+      <p class="footer-nav">
+        <a href="index.html">Главная</a>
+        <a href="profile.html">Профиль</a>
+        <a href="form.html">Анкета</a>
+      </p>
+      <p class="footer-contacts">
+        Email: <a href="mailto:club@zvezdochety.ru">club@zvezdochety.ru</a><br>
+        Телефон: <a href="tel:+79001234567">+7 (900) 123-45-67</a><br>
+        Адрес: г. Ставрополь, ул. Пушкина, 1
+      </p>
+      <p class="copyright">&copy; 2026 Звездочёты</p>
+    </footer>
+  </div>
+</body>
+</html>
