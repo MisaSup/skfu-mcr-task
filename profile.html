@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortis Club - Профиль</title>
+    <link rel="icon" href="https://icons8.com" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="phone-wrapper">
+        
+        <header class="site-header">
+            <img src="https://icons8.com" alt="Logo" class="logo">
+            <h1>Mortis Club</h1>
+        </header>
+
+        <nav class="site-nav">
+            <a href="index.html" class="nav-link">Главная</a>
+            <a href="form.html" class="nav-link">Анкета</a>
+            <a href="profile.html" class="nav-link active">Профиль</a>
+        </nav>
+
+        <main class="site-main">
+            <div class="profile-card">
+                <img src="https://icons8.com" alt="User Avatar" class="profile-avatar">
+                <h2 class="profile-tag">#92LV90UU</h2>
+                <span class="profile-status">Статус: Владелец Цилиндра</span>
+            </div>
+
+            <section class="profile-data">
+                <h3>Данные анкеты</h3>
+                <div class="data-row"><span>Email:</span> <strong>mortis@brawl.ru</strong></div>
+                <div class="data-row"><span>Кубки:</span> <strong>1250</strong></div>
+                <div class="data-row"><span>Скин:</span> <strong>Коварный Мортис</strong></div>
+                <div class="data-row"><span>Режим:</span> <strong>Броулбол (3 на 3)</strong></div>
+            </section>
+
+            <section class="password-change-box">
+                <h3>Изменение пароля</h3>
+                <form action="#" method="POST" class="quiz-form">
+                    <div class="form-group">
+                        <label for="old-pass">Введите старый пароль:</label>
+                        <input type="password" id="old-pass" name="old-pass" placeholder="••••••••" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="new-pass">Введите новый пароль:</label>
+                        <input type="password" id="new-pass" name="new-pass" placeholder="••••••••" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-pass">Повторите новый пароль:</label>
+                        <input type="password" id="confirm-pass" name="confirm-pass" placeholder="••••••••" required>
+                    </div>
+                    <button type="submit" class="btn btn-submit" style="margin-top: 10px;">Обновить пароль</button>
+                </form>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>© 2026 Novikov G.P. | SKFU MCR</p>
+            <div class="footer-links">
+                <a href="https://github.com">GitHub</a>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+</html>
