@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevCats Club — Стать мембером</title>
+    <link rel="icon" type="image/png" href="https://icons8.com">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <img class="logo" src="https://icons8.com" alt="Logo">
+        <span class="brand">DevCats</span>
+    </header>
+
+    <nav class="nav">
+        <a href="index.html" class="nav-link">Главная</a>
+        <a href="form.html" class="nav-link active">Анкета</a>
+        <a href="profile.html" class="nav-link">Профиль</a>
+    </nav>
+
+    <main class="main-content">
+        <div class="card">
+            <h2>Анкета кодера-кошатника</h2>
+            <form action="profile.html" method="GET" class="club-form">
+                
+                <!-- 1. Текст -->
+                <div class="form-group">
+                    <label>Твой никнейм/Имя:</label>
+                    <input type="text" placeholder="Например, Навайбкодил_3000" required>
+                </div>
+
+                <!-- 2. Email -->
+                <div class="form-group">
+                    <label>Электронная кошачья почта:</label>
+                    <input type="email" placeholder="cat@code.me" required>
+                </div>
+
+                <!-- 3. Пароль -->
+                <div class="form-group">
+                    <label>Секретный пароль:</label>
+                    <input type="password" placeholder="Минимум 8 знаков" required>
+                </div>
+
+                <!-- 4. Число -->
+                <div class="form-group">
+                    <label>Сколько чашек кофе пьешь за ночь?</label>
+                    <input type="number" min="0" max="10" value="2">
+                </div>
+
+                <!-- 5. Дата -->
+                <div class="form-group">
+                    <label>Когда ты написал свой первый "Hello World"?</label>
+                    <input type="date">
+                </div>
+
+                <!-- 6. Select -->
+                <div class="form-group">
+                    <label>Твой любимый язык программирования:</label>
+                    <select>
+                        <option>JavaScript / TypeScript</option>
+                        <option>Python</option>
+                        <option>HTML / CSS (да, это язык вайба)</option>
+                        <option>C++ / Rust (для суровых)</option>
+                    </select>
+                </div>
+
+                <!-- 7. Radio (Вариант 1) и 8. Radio (Вариант 2) -->
+                <div class="form-group">
+                    <label>Кого ты любишь больше?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="pet" checked> Котиков</label>
+                        <label><input type="radio" name="pet"> Очень пушистых котиков</label>
+                    </div>
+                </div>
+
+                <!-- 9. Textarea -->
+                <div class="form-group">
+                    <label>Расскажи самый несмешной IT-анекдот:</label>
+                    <textarea rows="3" placeholder="Заходят в бар сто сорок кодеров..."></textarea>
+                </div>
+
+                <!-- 10. Checkbox -->
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="agree" required>
+                    <label for="agree">Согласен на обработку кошачьих метрик и ночной ревью</label>
+                </div>
+
+                <!-- Кнопки Submit и Reset -->
+                <div class="form-buttons">
+                    <button type="submit" class="btn">Отправить</button>
+                    <button type="reset" class="btn btn-reset">Сбросить</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <img class="footer-logo" src="https://icons8.com" alt="Logo">
+        <div class="footer-nav">
+            <a href="index.html">Главная</a> | <a href="form.html">Анкета</a> | <a href="profile.html">Профиль</a>
+        </div>
+        <p class="contacts">TG: @devcats_club | Ночной вайб © 2026</p>
+    </footer>
+</body>
+</html>
