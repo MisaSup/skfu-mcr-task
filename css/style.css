@@ -132,3 +132,41 @@ h2 {
 .center {
   text-align: center;
 }
+
+/* Футер */
+
+.footer {
+  background-color: #1f2a5a;
+  color: white;
+  padding: 15px;
+  font-size: 14px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.footer-logo img {
+  width: 30px;
+  margin-right: 8px;
+}
+
+.footer-nav a {
+  margin-right: 15px;
+  color: white;
+}
+
+.footer a:hover {
+  color: #ffd54f;
+}
+
+.footer-contacts a {
+  color: #ffd54f;
+}
+
+.copyright {
+  color: #b8c0e8;
+  font-size: 12px;
+}
