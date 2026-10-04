@@ -159,3 +159,22 @@ button:hover { background: #d4a04c; color: #0f1420; }
   background: #0f1420;
   border-radius: 6px;
 }
+
+.quote {
+  border-left: 3px solid #d4a04c;
+  padding: 8px 12px;
+  margin: 16px 0;
+  color: #d4a04c;
+  font-style: italic;
+  background: #0f1420;
+  border-radius: 0 4px 4px 0;
+}
+
+ol {
+  margin-left: 20px;
+  margin-bottom: 12px;
+}
+
+ol li {
+  padding: 4px 0;
+}
