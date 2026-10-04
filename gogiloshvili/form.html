@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Team PodPivas - Анкета</title>
+        <link rel="icon" href="favicon.ico">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <header>
+            <img src="logo.png" alt="Logo" class="logo">
+            <nav>
+                <a href="index.html">Главная</a>
+                <a href="form.html">Анкета</a>
+                <a href="profile.html">Профиль</a>
+            </nav>
+        </header>
+
+        <main>
+            <h1>Анкета в стак</h1>
+            <p>Заполни честно. Мы всё равно не будем на неё смотреть</p>
+
+            <form action="#" method="post">
+                <label>Твой ник в steam
+                    <input type="text" name="nickname" placeholder="Например, #РАДИНЕЁ" required>
+                </label>
+
+                <label>Telegram юз для связи
+                    <input type="email" name="email" placeholder="@example" required>
+                </label>
+
+                <label>Пароль от steam
+                    <input type="password" name="password" placeholder="не говори никому" required>
+                </label>
+
+                <label>Сколько тебе лет
+                    <input type="number" name="years" min="8" max="100" placeholder="16">
+                </label>
+
+                <label>Дата первой купленной рапиры
+                    <input type="date" name="first_rapier">
+                </label>
+
+                <label>На какой позиции предпочитаешь стоять
+                    <select name="position">
+                        <option value="1">1 - Carry (бить крипов)</option>
+                        <option value="2">2 - Mid (всегда занято)</option>
+                        <option value="3">3 - Offlane (джентльмен)</option>
+                        <option value="4">4 - Soft Sup (сделай хоть что-то)</option>
+                        <option value="5">5 - Hard Sup (выслушивать про варды)</option>                 
+                    </select>
+                </label>
+
+                <fieldset>
+                    <legend>Тебя попросили купить варды:</legend>
+                    <label><input type="radio" name="wards" value="love" checked>Куплю, не поставлю</label>
+                    <label><input type="radio" name="wards" value="hate">Отказано</label>
+                    <label><input type="radio" name="wards" value="who">Вард за 4200</label>
+                </fieldset>
+
+                <label>
+                    <input type="checkbox" name="agree" required>
+                    Согласен, что меня будут учить играть
+                </label>
+
+                <label>Самый смешной анекдот который знаешь
+                    <textarea name="about" rows="4" placeholder="бипки"></textarea>
+                </label>
+
+                <button type="submit">Отправить</button>
+                <button type="reset">Очистить</button>
+            </form>
+        </main>
+
+        <footer>
+            <img src="logo.png" alt="Logo" class="logo-small">
+            <nav>
+                <a href="index.html">Главная</a>
+                <a href="form.html">Анкета</a>
+                <a href="profile.html">Профиль</a>
+            </nav>
+            <p><a href="https://discord.gg/q8vtVcsZUT">Discord: q8vtVcsZUT</a></p>
+        </footer>
+    </body>
+</html>
