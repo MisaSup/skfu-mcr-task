@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+    <head>
+        <meta charset="UTF=8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Team PodPivas - Профиль</title>
+        <link rel="icon" href="favicon.ico">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <header>
+            <img src="logo.gif" alt="Logo" class="logo">
+            <nav>
+                <a href="index.html">Главная</a>
+                <a href="form.html">Анкета</a>
+                <a href="profile.html">Профиль</a>
+            </nav>
+        </header>
+
+        <main>
+            <img src="avatar.png" alt="Аватар" class="avatar">
+            <h1>Никита «#РАДИНЕЁ»</h1>
+
+            <form class="profile-form">
+                <label>Игровой ник
+                    <input type="text" name="nickname" value="#РАДИНЕЁ" disabled>
+                </label>
+
+                <label>Telegram
+                    <input type="email" name="email" value="@Horbebraq" disabled>
+                </label>
+
+                <label>Пароль от Steam
+                    <input type="password" name="password" value="qwerty123" disabled>
+                </label>
+
+                <label>Возраст
+                    <input type="number" name="years" value="19" disabled>
+                </label>
+
+                <label>Дата первой купленной рапиры
+                    <input type="date" name="first_rapier" value="2020-05-12" disabled>
+                </label>
+
+                <label>Ссылка на Steam-профиль
+                    <input type="url" name="steam_url" value="https://steamcommunity.com/profiles/76561198975804440/" disabled>
+                </label>
+
+                <label>Позиция
+                    <select name="position" disabled>
+                        <option value="1" selected>1 — Carry (бить крипов)</option>
+                        <option value="2">2 — Mid (всегда занято)</option>
+                        <option value="3">3 — Offlane (джентльмен)</option>
+                        <option value="4">4 — Soft Sup (сделай хоть что-то)</option>
+                        <option value="5">5 — Hard Sup (выслушивать про варды)</option>
+                    </select>
+                </label>
+
+                <fieldset disabled>
+                    <legend>Тебя попросили купить варды:</legend>
+                    <label><input type="radio" name="wards" value="love" checked> Куплю, не поставлю</label>
+                    <label><input type="radio" name="wards" value="hate"> Отказано</label>
+                    <label><input type="radio" name="wards" value="who"> Вард за 4200</label>
+                </fieldset>
+
+                <label>
+                    <input type="checkbox" name="agree" checked disabled>
+                    Согласен, что меня будут учить играть
+                </label>
+
+                <label>Самый смешной анекдот который знаешь
+                    <textarea name="about" rows="4" disabled>бипки</textarea>
+                </label>
+            </form>
+
+            <section class="password-change">
+                <h2>Сменить пароль</h2>
+                <form action="#" method="post">
+                    <label>Текущий пароль
+                        <input type="password" name="old_password" placeholder="старый пароль" required>
+                    </label>
+                    <label>Новый пароль
+                        <input type="password" name="new_password" placeholder="новый пароль" required>
+                    </label>
+                    <label>Повторите новый пароль
+                        <input type="password" name="confirm_password" placeholder="ещё раз" required>
+                    </label>
+                    <button type="submit">Сменить пароль</button>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <img src="logo.gif" alt="Logo" class="logo-small">
+            <nav>
+                <a href="index.html">Главная</a>
+                <a href="form.html">Анкета</a>
+                <a href="profile.html">Профиль</a>
+            </nav>
+                <p><a href="https://discord.gg/q8vtVcsZUT">Discord: q8vtVcsZUT</a></p>
+        </footer>
+    </body>
+</html>
