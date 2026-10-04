@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль — Полночный сеанс</title>
+    <link rel="icon" type="image/svg+xml" href="img/logo.svg">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+    <a href="index.html" class="logo">
+        <img src="img/logo.svg" alt="Логотип">
+        <span>Полночный сеанс</span>
+    </a>
+    <nav class="nav">
+        <a href="index.html">Главная</a>
+        <a href="form.html">Анкета</a>
+        <a href="profile.html" class="active">Профиль</a>
+    </nav>
+</header>
+
+<main class="main">
+
+    <h1 class="page-title">Мой профиль</h1>
+
+    <section class="profile-card">
+        <img src="img/user.svg" alt="Фото пользователя" class="avatar">
+        <h2 class="profile-name">Иван Киноман</h2>
+        <p class="profile-role">Участник клуба с 2024 года</p>
+    </section>
+
+    <section class="profile-info">
+        <h3>Данные анкеты</h3>
+
+        <div class="info-row">
+            <span class="info-label">Имя / никнейм</span>
+            <span class="info-value">Иван Киноман</span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">Email</span>
+            <span class="info-value">ivan@example.com</span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">Возраст</span>
+            <span class="info-value">24</span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">Дата рождения</span>
+            <span class="info-value">12.03.2002</span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">Любимый жанр</span>
+            <span class="info-value">Артхаус</span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">Формат просмотра</span>
+            <span class="info-value">В кинотеатре</span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">Фильмов за год</span>
+            <span class="info-value">87</span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">Интересы</span>
+            <span class="info-value">Классика, обсуждения</span>
+        </div>
+        <div class="info-row info-row--column">
+            <span class="info-label">Любимый фильм</span>
+            <span class="info-value">«Малхолланд Драйв» — за атмосферу и загадку</span>
+        </div>
+    </section>
+
+    <section class="password-block">
+        <h3>Изменить пароль</h3>
+        <form class="form" action="#" method="post">
+
+            <div class="form-group">
+                <label for="old-password">Текущий пароль</label>
+                <input type="password" id="old-password" name="old_password" placeholder="Введите текущий пароль" required>
+            </div>
+
+            <div class="form-group">
+                <label for="new-password">Новый пароль</label>
+                <input type="password" id="new-password" name="new_password" placeholder="Минимум 6 символов" minlength="6" required>
+            </div>
+
+            <div class="form-group">
+                <label for="confirm-password">Повторите новый пароль</label>
+                <input type="password" id="confirm-password" name="confirm_password" placeholder="Ещё раз" minlength="6" required>
+            </div>
+
+            <button type="submit" class="btn">Сохранить новый пароль</button>
+
+        </form>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <div class="footer-logo">
+        <img src="img/logo.svg" alt="Логотип">
+        <span>Полночный сеанс</span>
+    </div>
+    <nav class="footer-nav">
+        <a href="index.html">Главная</a>
+        <a href="form.html">Анкета</a>
+        <a href="profile.html">Профиль</a>
+    </nav>
+    <div class="footer-contacts">
+        <p>📍 Москва, ул. Киношная, 24</p>
+        <p>📧 midnight@club.ru</p>
+        <p>📞 +7 (999) 000-24-00</p>
+    </div>
+    <p class="copyright">© 2026 Киноклуб «Полночный сеанс»</p>
+</footer>
+
+</body>
+</html>
