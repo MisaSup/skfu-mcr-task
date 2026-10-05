@@ -1,0 +1,331 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #1a1a1e;
+    color: #d1d1d6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #111112;
+    border-bottom: 1px solid #2a2a30;
+    padding: 25px 0;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 0 20px;
+}
+
+header .logo {
+    width: 40px;
+    height: 40px;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #ffffff;
+}
+
+nav {
+    background-color: #161618;
+    border-bottom: 1px solid #2a2a30;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 10px;
+    padding: 12px 20px;
+}
+
+nav a {
+    color: #8e8e93;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+nav a.active, nav a:hover {
+    color: #ffffff;
+    background-color: #2c2c35;
+}
+
+main {
+    flex: 1;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.intro {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.intro h2 {
+    font-size: 26px;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+.intro p {
+    color: #9a9a9f;
+    max-width: 750px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: #222227;
+    border: 1px solid #2d2d34;
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 1px solid #2d2d34;
+}
+
+.card-content {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-content h3 {
+    color: #ffffff;
+    font-size: 19px;
+    margin-bottom: 5px;
+}
+
+.card-content p {
+    font-size: 14px;
+    color: #b2b2b7;
+    line-height: 1.5;
+}
+
+.card-content strong {
+    color: #ff9f0a;
+}
+
+footer {
+    background-color: #111112;
+    border-top: 1px solid #2a2a30;
+    color: #636366;
+    padding: 25px 0;
+    text-align: center;
+    font-size: 13px;
+    margin-top: 40px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.form-section, .profile-card, .security-card {
+    background-color: #222227;
+    border: 1px solid #2d2d34;
+    border-radius: 6px;
+    padding: 30px;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+}
+
+.form-desc, .security-desc {
+    color: #9a9a9f;
+    font-size: 14px;
+    margin-bottom: 25px;
+    line-height: 1.4;
+}
+
+.blender-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* Стилизация инпутов под поля ввода Blender */
+.blender-form input[type="text"],
+.blender-form input[type="email"],
+.blender-form input[type="password"],
+.blender-form input[type="number"],
+.blender-form input[type="date"],
+.blender-form select,
+.blender-form textarea {
+    background-color: #161618;
+    border: 1px solid #3a3a44;
+    color: #ffffff;
+    padding: 10px 14px;
+    font-size: 14px;
+    border-radius: 4px;
+    outline: none;
+    width: 100%;
+    transition: border-color 0.2s;
+}
+
+.blender-form input:focus, 
+.blender-form select:focus, 
+.blender-form textarea:focus {
+    border-color: #ff9f0a; /* Оранжевый фокус активного инпута */
+}
+
+.radio-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.radio-options {
+    display: flex;
+    gap: 20px;
+}
+
+.radio-label, .custom-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #b2b2b7;
+    cursor: pointer;
+}
+
+.checkbox-group {
+    margin: 5px 0;
+}
+
+.custom-checkbox input, .radio-label input {
+    accent-color: #ff9f0a; /* Перекрашиваем стандартные галочки в оранжевый */
+}
+
+/* Кнопки управления */
+.form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.btn-submit {
+    background-color: #ff9f0a;
+    color: #111112;
+    border: none;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 4px;
+    cursor: pointer;
+    flex: 2;
+    transition: background-color 0.2s;
+}
+
+.btn-submit:hover {
+    background-color: #e08400;
+}
+
+.btn-reset {
+    background-color: #3a3a44;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    flex: 1;
+    transition: background-color 0.2s;
+}
+
+.btn-reset:hover {
+    background-color: #4a4a55;
+}
+
+/* Специфичные стили профиля */
+.profile-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.profile-avatar-container {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.profile-avatar {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ff9f0a;
+}
+
+.profile-details p {
+    font-size: 15px;
+    margin-bottom: 12px;
+    line-height: 1.5;
+    border-bottom: 1px solid #2d2d34;
+    padding-bottom: 8px;
+}
+
+.profile-details p:last-child {
+    border-bottom: none;
+}
+
+.profile-details strong {
+    color: #ffffff;
+    display: inline-block;
+    width: 220px;
+}
+
+.security-btn {
+    background-color: #4c6ef5; /* Синяя кнопка для секции безопасности */
+    color: white;
+    width: auto;
+    align-self: flex-start;
+}
+
+.security-btn:hover {
+    background-color: #3b5bdb;
+}
