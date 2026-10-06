@@ -149,7 +149,7 @@ git merge upstream/task/01
 2. Создайте свою ветку от неё:
 
    ```bash
-   git switch -c student/{НАЗВАНИЕ ТАСКА}-{ВАША ФАМИЛИЯ ИО [gorelovma]}
+   git switch -c student/{НАЗВАНИЕ ТАСКА}-{ВАША ФАМИЛИЯ ИО}
 
    Например: 
    git switch -c student/JS-01-gorelovma
