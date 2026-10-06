@@ -64,7 +64,7 @@ export const popElement = (arr) => {
     пример ответа: "The white cat has 4 legs"
 */
 
-export const getAnimalDescription = ({ animal, legs, color }) => {
+export const getAnimalDescription = (obj) => {
 
 }
 
@@ -148,7 +148,7 @@ export const isStringArray = (arr) => {
 */
 
 export const return2007 = (str) => {
-    
+
 }
 
 
