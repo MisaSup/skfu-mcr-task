@@ -33,11 +33,11 @@ const randomArr = Object.freeze(makeRandomArr());
 const randomObj = Object.freeze(makeRandomObj());
 
 
-test('task-00', () => {
+test('task-00 helloWorld', () => {
     assert.strictEqual(helloWorld(), 'Hello, World!');
 });
 
-test('task-01', () => {
+test('task-01 getString', () => {
     assert.ok(typeof getString(randomString) === 'string');
     assert.ok(!(typeof getString(7) === 'string'));
     assert.ok(!(typeof getString([]) === 'string'));
@@ -48,7 +48,7 @@ test('task-01', () => {
     assert.strictEqual(getString(randomString), randomString);
 });
 
-test('task-02', async (t) => {
+test('task-02 getLength, getFirst, getLast, pushElement, popElement', async (t) => {
     const localString = makeRandomString();
     const arr = makeRandomArr();
 
@@ -79,7 +79,7 @@ test('task-02', async (t) => {
     })
 });
 
-test('task-03', () => {
+test('task-03 getAnimalDescription', () => {
     const animal = String(Math.floor(Math.random() * 1001));
     const legs = Math.floor(Math.random() * 1001);
     const color = String(Math.floor(Math.random() * 1001));
@@ -94,7 +94,7 @@ test('task-03', () => {
     assert.ok(!getAnimalDescription(obj).includes('null'));
 });
 
-test('task-04', async (t) => {
+test('task-04 getObjKeys, getObjValues', async (t) => {
     const obj = { ...randomObj };
 
     await t.test('getObjKeys', () => {
@@ -105,7 +105,7 @@ test('task-04', async (t) => {
     })
 });
 
-test('task-05', () => {
+test('task-05 patchObj', () => {
     const baseObj = { ...randomObj };
     const randomObj2 = Object.fromEntries(
         Array.from({ length: Math.floor(Math.random() * 6) + 2 }, (_, i) => [`key${i + 3}`, Math.floor(Math.random() * 1001)])
@@ -116,7 +116,7 @@ test('task-05', () => {
     assert.notEqual(patchObj(baseObj, randomObj2), baseObj);
 });
 
-test('task-06', async (t) => {
+test('task-06 deleteItem', async (t) => {
     const arr = [...randomArr];
 
     await t.test('delete non existing item', () => {
@@ -131,20 +131,20 @@ test('task-06', async (t) => {
     })
 });
 
-test('task-07', () => {
+test('task-07 multiplyByTwo', () => {
     const arr = [...randomArr];
 
     assert.deepStrictEqual(multiplyByTwo(arr), arr.map(item => item * 2));
     assert.notEqual(multiplyByTwo(arr), arr);
 });
 
-test('task-08', () => {
+test('task-08 getAssessments', () => {
     assert.deepStrictEqual(getAssessments([10, 5, 9, 3, 7, 7, 4, 8, 0, 5]), { 5: 1, 4: 2, 3: 4, 2: 3 });
     assert.deepStrictEqual(getAssessments([10, 5, 9, 3, 7, 7, 4]), { 5: 1, 4: 1, 3: 3, 2: 2 });
     assert.deepStrictEqual(getAssessments([10, 5, 9, 3, 7, 7, 4, 8, 0, 5, 0, 0, 7]), { 5: 1, 4: 2, 3: 5, 2: 5 });
 });
 
-test('task-09', async (t) => {
+test('task-09 hasBoolean, isStringArray', async (t) => {
     const arr = [...randomArr];
 
     await t.test('hasBoolean', () => {
@@ -161,7 +161,7 @@ test('task-09', async (t) => {
     })
 });
 
-test('task-10', () => {
+test('task-10 return2007', () => {
     assert.strictEqual(return2007('Всех Люблю!'), 'ФсЕх ЛЮбЛю!:*');
     assert.strictEqual(return2007('Верни мой две тысячи седьмой!'), 'ФеРнИ МоЙ ДфЕ ТыСяЧи сЕдЬмОй!:*');
 });

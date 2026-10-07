@@ -128,6 +128,7 @@ export const getAssessments = (arr) => {
     task-09 Напишите две функции которые принимают массив и возвращают значение типа boolean
     hasBoolean - true если в массиве хотя бы один элемент является boolean
     isStringArray - true если все элементы массива являются строками
+    Для пустого массива isStringArray возвращает false
 */
 
 export const hasBoolean = (arr) => {
