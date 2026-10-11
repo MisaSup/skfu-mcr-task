@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17151d">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <title>Профиль Софии — Night Shelf</title>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header"><a class="brand" href="index.html" aria-label="Night Shelf, на главную"><img src="assets/logo.svg" alt=""><span><small>книжный клуб</small><strong>Night Shelf</strong></span></a><nav class="top-nav" aria-label="Основная навигация"><a href="index.html">Главная</a><a href="profile.html" aria-current="page">Профиль</a><a href="form.html">Анкета</a></nav></header>
+
+    <main class="main-content">
+      <div class="page-heading"><p class="eyebrow">личная полка · 2024</p><h1>Твой профиль</h1><p>Здесь собраны ответы из анкеты и маленькая статистика твоего книжного лета.</p></div>
+      <section class="form-card" aria-labelledby="profile-title">
+        <div class="profile-top"><img class="avatar" src="assets/avatar.svg" alt="Портрет Софии Ветровой"><div class="profile-meta"><h2 id="profile-title">София Ветрова</h2><p>Участница с ноября 2023</p><span class="tag">ночной читатель</span></div></div>
+        <div class="read-meter"><div class="meter-top"><strong>Читательский ритм</strong><span>17 / 25 книг</span></div><div class="meter"><i></i></div></div>
+
+        <form data-demo-form data-success="Изменения сохранены в профиле.">
+          <section class="form-section" aria-labelledby="profile-data"><h2 id="profile-data">Данные анкеты</h2>
+            <div class="field"><label for="profile-name">Имя</label><input id="profile-name" name="name" type="text" value="София Ветрова"></div>
+            <div class="field"><label for="profile-nickname">Книжное прозвище</label><input id="profile-nickname" name="nickname" type="text" value="Лунная библиотекарша"></div>
+            <div class="field"><label for="profile-email">Email</label><input id="profile-email" name="email" type="email" value="sofia@example.com"></div>
+            <div class="inline-fields"><div class="field"><label for="profile-age">Возраст</label><input id="profile-age" name="age" type="number" value="24" min="12" max="99"></div><div class="field"><label for="profile-books">Книг за лето</label><input id="profile-books" name="books" type="number" value="17" min="0" max="999"></div></div>
+            <div class="field"><label for="profile-birthday">День рождения</label><input id="profile-birthday" name="birthday" type="date" value="2000-10-14"></div>
+            <div class="field"><label for="profile-genre">Любимый жанр</label><select id="profile-genre" name="genre"><option>Современная проза</option><option selected>Фэнтези</option><option>Нон-фикшн</option><option>Детектив</option><option>Поэзия</option></select></div>
+            <fieldset class="field"><legend class="fieldset-label">Когда читаешь чаще?</legend><div class="choice-list"><label class="choice"><input type="radio" name="profile-time" value="morning"> Утром</label><label class="choice"><input type="radio" name="profile-time" value="day"> Днём</label><label class="choice"><input type="radio" name="profile-time" value="night" checked> Ночью, когда всё затихает</label></div></fieldset>
+            <fieldset class="field"><legend class="fieldset-label">Что взять на встречу?</legend><div class="choice-list"><label class="choice"><input type="checkbox" name="profile-tea" checked> Чай с бергамотом</label><label class="choice"><input type="checkbox" name="profile-snack"> Что-нибудь сладкое</label></div></fieldset>
+            <div class="field"><label for="profile-about">О себе</label><textarea id="profile-about" name="about">Люблю истории, в которых дом — это не место, а человек.</textarea></div>
+          </section>
+
+          <section class="password-box" aria-labelledby="password-title"><h2 id="password-title">Изменить пароль</h2><p>Обновляй его время от времени, чтобы личная полка оставалась только твоей.</p><div class="field"><label for="old-password">Текущий пароль</label><input id="old-password" name="old-password" type="password" placeholder="Введите текущий пароль"></div><div class="field"><label for="new-password">Новый пароль</label><input id="new-password" name="new-password" type="password" placeholder="Введите новый пароль"></div><div class="field"><label for="repeat-password">Повтори новый пароль</label><input id="repeat-password" name="repeat-password" type="password" placeholder="Ещё раз новый пароль"></div><button class="button full" type="submit">Сохранить изменения</button></section>
+          <div class="notice" role="status" aria-live="polite"></div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer"><div class="footer-top"><a class="footer-brand" href="index.html"><img src="assets/logo.svg" alt="">Night Shelf</a><p class="footer-note">Тёплый свет, хорошие истории и люди, с которыми хочется говорить.</p></div><nav class="footer-nav" aria-label="Навигация в подвале"><a href="index.html">Главная</a><a href="profile.html">Профиль</a><a href="form.html">Анкета</a><a href="mailto:hello@nightshelf.club">hello@nightshelf.club</a></nav><p class="copyright">© 2024 Night Shelf · читаем бережно</p></footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

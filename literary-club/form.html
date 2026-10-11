@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17151d">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <title>Анкета — Night Shelf</title>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Night Shelf, на главную"><img src="assets/logo.svg" alt=""><span><small>книжный клуб</small><strong>Night Shelf</strong></span></a>
+      <nav class="top-nav" aria-label="Основная навигация"><a href="index.html">Главная</a><a href="profile.html">Профиль</a><a href="form.html" aria-current="page">Анкета</a></nav>
+    </header>
+
+    <main class="main-content">
+      <div class="page-heading"><p class="eyebrow">шаг 01 · знакомство</p><h1>Твоя читательская полка</h1><p>Заполни поля ниже. Это займёт около двух минут, а нам поможет сделать встречу действительно твоей.</p></div>
+      <form class="form-card" data-demo-form data-success="Анкета отправлена! Скоро напишем на твою почту с деталями встречи.">
+        <section class="form-section" aria-labelledby="about-you">
+          <h2 id="about-you">Немного о тебе</h2>
+          <div class="field"><label for="name">Имя *</label><input id="name" name="name" type="text" placeholder="Например, София" required></div>
+          <div class="field"><label for="nickname">Как к тебе обращаться?</label><input id="nickname" name="nickname" type="text" placeholder="Твоё книжное прозвище"></div>
+          <div class="field"><label for="email">Email *</label><input id="email" name="email" type="email" placeholder="you@example.com" required></div>
+          <div class="field"><label for="password">Пароль *</label><input id="password" name="password" type="password" placeholder="Минимум 8 символов" minlength="8" required><p class="hint">Он нужен, чтобы открыть личный профиль.</p></div>
+          <div class="inline-fields"><div class="field"><label for="age">Возраст</label><input id="age" name="age" type="number" min="12" max="99" placeholder="24"></div><div class="field"><label for="books">Книг за лето</label><input id="books" name="books" type="number" min="0" max="999" placeholder="7"></div></div>
+          <div class="field"><label for="birthday">День рождения</label><input id="birthday" name="birthday" type="date"></div>
+        </section>
+
+        <section class="form-section" aria-labelledby="taste">
+          <h2 id="taste">Твои читательские привычки</h2>
+          <div class="field"><label for="genre">Любимый жанр</label><select id="genre" name="genre"><option value="">Выбери жанр</option><option>Современная проза</option><option>Фэнтези</option><option>Нон-фикшн</option><option>Детектив</option><option>Поэзия</option></select></div>
+          <fieldset class="field"><legend class="fieldset-label">Когда читаешь чаще?</legend><div class="choice-list"><label class="choice"><input type="radio" name="time" value="morning"> Утром, пока город просыпается</label><label class="choice"><input type="radio" name="time" value="day"> Днём, в каждом свободном окне</label><label class="choice"><input type="radio" name="time" value="night" checked> Ночью, когда всё затихает</label></div></fieldset>
+          <fieldset class="field"><legend class="fieldset-label">Что взять на встречу?</legend><div class="choice-list"><label class="choice"><input type="checkbox" name="tea" checked> Чай с бергамотом</label><label class="choice"><input type="checkbox" name="snack"> Что-нибудь сладкое</label></div></fieldset>
+          <div class="field"><label for="about">Расскажи о себе</label><textarea id="about" name="about" placeholder="Какая история осталась с тобой надолго?"></textarea></div>
+          <label class="check-row"><input type="checkbox" name="consent" required> Я согласен(на) на обработку данных для участия в клубе *</label>
+        </section>
+
+        <div class="form-actions"><button class="button full" type="submit">Отправить анкету <span aria-hidden="true">↗</span></button><input class="button secondary full" type="reset" value="Очистить форму"></div>
+        <div class="notice" role="status" aria-live="polite"></div>
+      </form>
+    </main>
+
+    <footer class="site-footer"><div class="footer-top"><a class="footer-brand" href="index.html"><img src="assets/logo.svg" alt="">Night Shelf</a><p class="footer-note">Тёплый свет, хорошие истории и люди, с которыми хочется говорить.</p></div><nav class="footer-nav" aria-label="Навигация в подвале"><a href="index.html">Главная</a><a href="profile.html">Профиль</a><a href="form.html">Анкета</a><a href="mailto:hello@nightshelf.club">hello@nightshelf.club</a></nav><p class="copyright">© 2024 Night Shelf · читаем бережно</p></footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

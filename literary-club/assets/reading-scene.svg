@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 560" role="img" aria-labelledby="title desc">
+  <title id="title">Человек читает у окна</title>
+  <desc id="desc">Иллюстрация уютного вечера с книгой и луной</desc>
+  <defs>
+    <linearGradient id="wall" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#2a1f3b"/><stop offset="1" stop-color="#15151d"/></linearGradient>
+    <linearGradient id="window" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#51458c"/><stop offset="1" stop-color="#1f2040"/></linearGradient>
+    <linearGradient id="blanket" x1="0" x2="1"><stop stop-color="#f4b75f"/><stop offset="1" stop-color="#d97d55"/></linearGradient>
+  </defs>
+  <rect width="760" height="560" rx="36" fill="url(#wall)"/>
+  <circle cx="585" cy="102" r="43" fill="#f7e8ca"/>
+  <circle cx="606" cy="88" r="43" fill="#2a1f3b"/>
+  <g opacity=".65" fill="#f7e8ca"><circle cx="99" cy="92" r="3"/><circle cx="156" cy="138" r="2"/><circle cx="685" cy="176" r="3"/><circle cx="514" cy="48" r="2"/><circle cx="646" cy="62" r="2"/></g>
+  <rect x="86" y="92" width="242" height="238" rx="14" fill="#10101a" stroke="#f4b75f" stroke-width="8"/>
+  <rect x="102" y="108" width="210" height="206" rx="6" fill="url(#window)"/>
+  <path d="M207 108v206M102 211h210" stroke="#f4b75f" stroke-width="7" opacity=".8"/>
+  <path d="M0 421c112-26 198-8 277 7 126 25 217-10 344-24 48-5 92-3 139 9v147H0Z" fill="#17151d"/>
+  <path d="M188 424c57-57 155-68 238-23 38 21 69 50 78 94H147c1-26 15-51 41-71Z" fill="url(#blanket)"/>
+  <circle cx="358" cy="309" r="46" fill="#c98260"/>
+  <path d="M318 306c4-38 78-56 100-5-18-10-26-27-51-18-17 6-30 22-49 23Z" fill="#332437"/>
+  <path d="M326 350c14 22 70 25 93-2l25 44-143 1Z" fill="#e9a05d"/>
+  <rect x="317" y="371" width="119" height="67" rx="4" transform="rotate(-7 317 371)" fill="#f7e8ca"/>
+  <path d="m379 368 16 66" stroke="#d8b78b" stroke-width="3"/>
+  <path d="M330 388h40M333 399h40M403 383h19M405 394h17" stroke="#9c6b58" stroke-width="3" stroke-linecap="round" opacity=".8"/>
+  <path d="M523 410c33-18 60-17 83 4l-4 58H510Z" fill="#8d66df" opacity=".8"/>
+  <path d="M502 470h127" stroke="#f4b75f" stroke-width="5" stroke-linecap="round"/>
+</svg>
