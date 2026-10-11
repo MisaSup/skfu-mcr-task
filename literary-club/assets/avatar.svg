@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title">
+  <title>Аватар Софии Ветровой</title>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8d66df"/><stop offset="1" stop-color="#d97d55"/></linearGradient></defs>
+  <rect width="240" height="240" rx="80" fill="url(#bg)"/>
+  <circle cx="120" cy="104" r="48" fill="#f0b38b"/>
+  <path d="M74 103c-4-48 32-70 69-61 32 8 47 34 41 62-21-6-32-37-57-34-20 3-27 28-53 33Z" fill="#34243c"/>
+  <path d="M63 207c7-56 39-78 57-78s52 21 57 78Z" fill="#242038"/>
+  <path d="M97 125c9 15 39 17 49-1" fill="none" stroke="#b45e5d" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="103" cy="103" r="5" fill="#34243c"/><circle cx="140" cy="103" r="5" fill="#34243c"/>
+  <path d="M95 91c8-8 18-9 26-3M132 88c8-5 16-4 22 2" fill="none" stroke="#34243c" stroke-width="4" stroke-linecap="round"/>
+</svg>
