@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AstroClub — Профиль</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+
+    <header class="header">
+      <a href="index.html" class="logo">
+        <img src="logo.svg" alt="Логотип">
+        <span>AstroClub</span>
+      </a>
+      <nav class="nav">
+        <a href="index.html">Главная</a>
+        <a href="form.html">Анкета</a>
+        <a href="profile.html" class="active">Профиль</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Мой профиль</h1>
+
+      <div class="avatar-block">
+        <img src="avatar.svg" alt="Аватар">
+        <p>Мария Иванова</p>
+      </div>
+
+      <div class="card">
+        <h2>Данные анкеты</h2>
+
+        <div class="field">
+          <label>Имя и фамилия</label>
+          <input type="text" value="Мария Иванова" readonly>
+        </div>
+
+        <div class="field">
+          <label>Email</label>
+          <input type="email" value="maria@example.com" readonly>
+        </div>
+
+        <div class="field">
+          <label>Дата рождения</label>
+          <input type="date" value="1998-05-14" readonly>
+        </div>
+
+        <div class="field">
+          <label>Время рождения</label>
+          <input type="time" value="03:25" readonly>
+        </div>
+
+        <div class="field">
+          <label>Место рождения</label>
+          <input type="text" value="г. Симферополь" readonly>
+        </div>
+
+        <div class="field">
+          <label>Счастливое число</label>
+          <input type="number" value="7" readonly>
+        </div>
+
+        <div class="field">
+          <label>Пол</label>
+          <input type="text" value="Женский" readonly>
+        </div>
+
+        <div class="field">
+          <label>Знак зодиака</label>
+          <input type="text" value="Телец" readonly>
+        </div>
+
+        <div class="field">
+          <label>О себе</label>
+          <textarea readonly>Обожаю астрологию с 14 лет, хочу найти единомышленников и разобраться в транзитах.</textarea>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Изменить пароль</h2>
+        <form action="#" method="post">
+          <div class="field">
+            <label for="oldpass">Текущий пароль</label>
+            <input type="password" id="oldpass" name="oldpass" placeholder="••••••••">
+          </div>
+          <div class="field">
+            <label for="newpass">Новый пароль</label>
+            <input type="password" id="newpass" name="newpass" placeholder="••••••••">
+          </div>
+          <div class="field">
+            <label for="newpass2">Повторите новый пароль</label>
+            <input type="password" id="newpass2" name="newpass2" placeholder="••••••••">
+          </div>
+          <div class="buttons">
+            <button type="submit">Сохранить</button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-logo">
+        <img src="logo.svg" alt="Лого">
+        <span>AstroClub</span>
+      </div>
+      <nav>
+        <a href="index.html">Главная</a>
+        <a href="form.html">Анкета</a>
+        <a href="profile.html">Профиль</a>
+      </nav>
+      <p>📧 info@astroclub.ru<br>📞 +7 (900) 123-45-67</p>
+      <p class="copy">© 2026 AstroClub</p>
+    </footer>
+
+  </div>
+</body>
+</html>
