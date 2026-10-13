@@ -80,9 +80,7 @@ export const patchObj = (obj, updates) => ({ ...obj, ...updates });
     Если элемента нет в массиве просто возвращаем новую копию массива
 */
 
-export const deleteItem = (arr, item) => {
-
-}
+export const deleteItem = (arr, item) => arr.filter((el) => el !== item);
 
 /*
     task-07 Напишите функцию которая принимает массив чисел и возвращает новый массив где все числа умножены на 2
