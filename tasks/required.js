@@ -100,8 +100,16 @@ export const multiplyByTwo = (arr) => arr.map((n) => n * 2);
 */
 
 export const getAssessments = (arr) => {
-
-}
+  return arr.reduce((acc, n) => {
+    let grade;
+    if (n === 10) grade = 5;
+    else if (n >= 8) grade = 4;
+    else if (n >= 5) grade = 3;
+    else grade = 2;
+    acc[grade] = (acc[grade] || 0) + 1;
+    return acc;
+  }, {});
+};
 
 /*
     task-09 Напишите две функции которые принимают массив и возвращают значение типа boolean
