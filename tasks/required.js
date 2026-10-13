@@ -18,9 +18,8 @@ export const helloWorld = () => {
     Создайте функцию, которая принимает и возвращает эту же строку
 */
 
-export const getString = (str) => {
+export const getString = (str) => str;
 
-}
 
 /*
     task-02 напишите несколько функций для работы с массивами
