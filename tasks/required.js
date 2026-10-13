@@ -30,25 +30,14 @@ export const getString = (str) => str;
     5. popElement(arr)   удаляет последний элемент и возвращает удаленный элемент
 */
 
-export const getLength = (arr) => {
-
-}
-
-export const getFirst = (arr) => {
-
-}
-
-export const getLast = (arr) => {
-
-}
-
+export const getLength = (arr) => arr.length;
+export const getFirst = (arr) => arr[0];
+export const getLast = (arr) => arr[arr.length - 1];
 export const pushElement = (arr, elem) => {
-
-}
-
-export const popElement = (arr) => {
-
-}
+  arr.push(elem);
+  return arr;
+};
+export const popElement = (arr) => arr.pop();
 
 /*
     task-03 напишите функцию, которая принимает объект и склеивает из значений его свойст строку
