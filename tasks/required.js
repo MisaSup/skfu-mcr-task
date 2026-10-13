@@ -63,14 +63,8 @@ export const getAnimalDescription = (obj) => {
     task-04 Напишите две функции, которые принимают объект и возвращают ключи и значения объекта в виде массива 
 */
 
-export const getObjKeys = (obj) => {
-
-}
-
-export const getObjValues = (obj) => {
-
-}
-
+export const getObjKeys = (obj) => Object.keys(obj);
+export const getObjValues = (obj) => Object.values(obj);
 /*
     task-05 Напишите две функцию, которая добавляет новое свойство в объект или меняет существующее
     Функция принимает два объекта: объект который нужно обновить и объект со свойствами которые нужно добавить
