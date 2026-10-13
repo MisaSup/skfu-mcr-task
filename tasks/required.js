@@ -55,8 +55,9 @@ export const popElement = (arr) => arr.pop();
 */
 
 export const getAnimalDescription = (obj) => {
-
-}
+    const { animal, legs, color } = obj;
+    return `The ${color} ${animal} has ${legs} legs`;
+};
 
 /*
     task-04 Напишите две функции, которые принимают объект и возвращают ключи и значения объекта в виде массива 
