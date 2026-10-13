@@ -118,13 +118,9 @@ export const getAssessments = (arr) => {
     Для пустого массива isStringArray возвращает false
 */
 
-export const hasBoolean = (arr) => {
-
-}
-
-export const isStringArray = (arr) => {
-
-}
+export const hasBoolean = (arr) => arr.some((el) => typeof el === 'boolean');
+export const isStringArray = (arr) =>
+  arr.length > 0 && arr.every((el) => typeof el === 'string');
 
 /*
     task-10 Напишите функцию, которая принимает строку и возвращает измененную строку в эмо стиле
