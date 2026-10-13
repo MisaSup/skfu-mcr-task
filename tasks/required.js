@@ -8,8 +8,10 @@
 */
 
 export const helloWorld = () => {
-
-}
+    const greeting = "Hello, World!";
+    console.log(greeting);
+    return greeting;
+};
 
 /*
     task-01
