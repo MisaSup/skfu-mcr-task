@@ -86,9 +86,7 @@ export const deleteItem = (arr, item) => arr.filter((el) => el !== item);
     task-07 Напишите функцию которая принимает массив чисел и возвращает новый массив где все числа умножены на 2
 */
 
-export const multiplyByTwo = (arr) => {
-
-}
+export const multiplyByTwo = (arr) => arr.map((n) => n * 2);
 
 /*
     task-08 Напишите функцию которая принимает массив c количеством выполненных заданий и возвращает объект с оценками за задание
