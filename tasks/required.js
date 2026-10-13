@@ -72,9 +72,7 @@ export const getObjValues = (obj) => Object.values(obj);
     Попробуйте spread оператор: https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 */
 
-export const patchObj = (obj, updates) => {
-
-}
+export const patchObj = (obj, updates) => ({ ...obj, ...updates });
 
 /*
     task-06 Напишите функцию, которая принимает массив и элемент, который нужно удалить
