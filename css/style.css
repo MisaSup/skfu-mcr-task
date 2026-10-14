@@ -1,0 +1,282 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #e3e6f0;
+  color: #222222;
+}
+
+.container {
+  width: 430px;
+  min-height: 932px;
+  margin: 0 auto;
+  background-color: #f7f8fc;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Хедер */
+
+.header {
+  background-color: #1f2a5a;
+  padding: 10px 15px 0;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.header-logo img {
+  width: 45px;
+  height: 45px;
+  margin-right: 10px;
+}
+
+.header-logo span {
+  display: block;
+  font-size: 12px;
+  font-weight: normal;
+  color: #b8c0e8;
+}
+
+.nav {
+  display: flex;
+  margin-top: 10px;
+}
+
+.nav a {
+  flex: 1;
+  padding: 10px 0;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+}
+
+.nav a:hover {
+  color: #ffd54f;
+}
+
+.nav a.active {
+  color: #ffd54f;
+  border-bottom-color: #ffd54f;
+}
+
+/* Контент */
+
+.content {
+  flex: 1;
+  padding: 15px;
+}
+
+h1 {
+  color: #1f2a5a;
+  margin-top: 5px;
+}
+
+h2 {
+  color: #1f2a5a;
+  font-size: 20px;
+  margin-top: 0;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.list li {
+  margin-bottom: 6px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #1f2a5a;
+  color: white;
+  border: 2px solid #1f2a5a;
+  border-radius: 20px;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #3949ab;
+  border-color: #3949ab;
+}
+
+.button-light {
+  background-color: white;
+  color: #1f2a5a;
+}
+
+.button-light:hover {
+  background-color: #e3e6f0;
+  border-color: #1f2a5a;
+}
+
+.center {
+  text-align: center;
+}
+
+/* Форма */
+
+.form fieldset {
+  border: none;
+  min-width: 0;
+}
+
+.form label {
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 4px;
+  font-size: 14px;
+  color: #555555;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="password"],
+.form input[type="number"],
+.form input[type="date"],
+.form select,
+.form textarea {
+  width: 100%;
+  padding: 9px;
+  border: 1px solid #bbbbbb;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.form input:focus,
+.form select:focus,
+.form textarea:focus {
+  outline: none;
+  border-color: #3949ab;
+  box-shadow: 0 0 0 2px rgba(57, 73, 171, 0.2);
+}
+
+.form textarea {
+  height: 90px;
+  resize: vertical;
+}
+
+.form .inline {
+  display: inline;
+  margin-right: 12px;
+  color: #222222;
+}
+
+.required {
+  color: #d32f2f;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.buttons .button {
+  width: 48%;
+}
+
+/* Профиль */
+
+.profile-top {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #ffd54f;
+  margin-right: 15px;
+}
+
+.profile-top h1 {
+  margin: 0;
+}
+
+.profile-top p {
+  margin: 5px 0 0;
+  color: #666666;
+}
+
+.profile-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.profile-table td {
+  padding: 8px 4px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.profile-table tr:last-child td {
+  border-bottom: none;
+}
+
+.profile-table td:first-child {
+  color: #666666;
+}
+
+.profile-table td:last-child {
+  text-align: right;
+}
+
+/* Футер */
+
+.footer {
+  background-color: #1f2a5a;
+  color: white;
+  padding: 15px;
+  font-size: 14px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.footer-logo img {
+  width: 30px;
+  margin-right: 8px;
+}
+
+.footer-nav a {
+  margin-right: 15px;
+  color: white;
+}
+
+.footer a:hover {
+  color: #ffd54f;
+}
+
+.footer-contacts a {
+  color: #ffd54f;
+}
+
+.copyright {
+  color: #b8c0e8;
+  font-size: 12px;
+}
