@@ -8,7 +8,9 @@
 */
 
 export const helloWorld = () => {
-
+    const hello = "Hello, World!";
+    console.log(hello);
+    return hello;
 }
 
 /*
@@ -17,7 +19,7 @@ export const helloWorld = () => {
 */
 
 export const getString = (str) => {
-
+    return str;
 }
 
 /*
@@ -30,23 +32,24 @@ export const getString = (str) => {
 */
 
 export const getLength = (arr) => {
-
+    return arr.length;
 }
 
 export const getFirst = (arr) => {
-
+    return arr[0];
 }
 
 export const getLast = (arr) => {
-
+    return arr[arr.length - 1];
 }
 
 export const pushElement = (arr, elem) => {
-
+    arr.push(elem);
+    return arr;
 }
 
 export const popElement = (arr) => {
-
+    return arr.pop();
 }
 
 /*
@@ -65,7 +68,8 @@ export const popElement = (arr) => {
 */
 
 export const getAnimalDescription = (obj) => {
-
+    const { animal, legs, color } = obj;
+    return `The ${color} ${animal} has ${legs} legs`;
 }
 
 /*
@@ -73,11 +77,11 @@ export const getAnimalDescription = (obj) => {
 */
 
 export const getObjKeys = (obj) => {
-
+    return Object.keys(obj);
 }
 
 export const getObjValues = (obj) => {
-
+    return Object.values(obj);
 }
 
 /*
