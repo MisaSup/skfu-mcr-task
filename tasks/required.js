@@ -92,7 +92,7 @@ export const getObjValues = (obj) => {
 */
 
 export const patchObj = (obj, updates) => {
-
+    return { ...obj, ...updates };
 }
 
 /*
@@ -102,7 +102,11 @@ export const patchObj = (obj, updates) => {
 */
 
 export const deleteItem = (arr, item) => {
-
+    const index = arr.indexOf(item);
+    if (index === -1) {
+        return [...arr];
+    }
+    return [...arr.slice(0, index), ...arr.slice(index + 1)];
 }
 
 /*
@@ -110,7 +114,7 @@ export const deleteItem = (arr, item) => {
 */
 
 export const multiplyByTwo = (arr) => {
-
+    return arr.map((num) => num * 2);
 }
 
 /*
