@@ -129,7 +129,21 @@ export const multiplyByTwo = (arr) => {
 */
 
 export const getAssessments = (arr) => {
+    const result = { 5: 0, 4: 0, 3: 0, 2: 0 };
 
+    for (const count of arr) {
+        if (count === 10) {
+            result[5]++;
+        } else if (count >= 8) {
+            result[4]++;
+        } else if (count >= 5) {
+            result[3]++;
+        } else {
+            result[2]++;
+        }
+    }
+
+    return result;
 }
 
 /*
@@ -140,11 +154,14 @@ export const getAssessments = (arr) => {
 */
 
 export const hasBoolean = (arr) => {
-
+    return arr.some((item) => typeof item === "boolean");
 }
 
 export const isStringArray = (arr) => {
-
+    if (arr.length === 0) {
+        return false;
+    }
+    return arr.every((item) => typeof item === "string");
 }
 
 /*
@@ -157,7 +174,18 @@ export const isStringArray = (arr) => {
 */
 
 export const return2007 = (str) => {
+    const chars = str.replaceAll("в", "ф").replaceAll("В", "Ф").split("");
 
+    const result = chars.reduce((acc, char, index) => {
+        if (index % 2 === 0) {
+            acc.push(char.toUpperCase());
+        } else {
+            acc.push(char.toLowerCase());
+        }
+        return acc;
+    }, []);
+
+    return result.join("") + ":*";
 }
 
 
