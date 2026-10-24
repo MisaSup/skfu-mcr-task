@@ -8,7 +8,10 @@
 */
 
 export const factorial = (n) => {
-
+    if (n <= 1) {
+        return 1;
+    }
+    return n * factorial(n - 1);
 }
 
 /*
@@ -22,7 +25,13 @@ export const factorial = (n) => {
 */
 
 export const fibonacci = (index) => {
-
+    if (index < 0) {
+        return -1;
+    }
+    if (index < 2) {
+        return index;
+    }
+    return fibonacci(index - 1) + fibonacci(index - 2);
 }
 
 /*
@@ -33,7 +42,7 @@ export const fibonacci = (index) => {
 */
 
 export const isFalsy = (value) => {
-    
+    return !value;
 }
 
 /*
@@ -46,7 +55,7 @@ export const isFalsy = (value) => {
 */
 
 export const palindrome = (str) => {
-
+    return str === str.split("").reverse().join("");
 }
 
 /*
@@ -65,7 +74,19 @@ export const palindrome = (str) => {
 */
 
 export const keepRepeated = (str) => {
+    const counts = new Map();
 
+    for (const char of str.toLowerCase()) {
+        counts.set(char, (counts.get(char) || 0) + 1);
+    }
+
+    let result = "";
+    for (const char of str) {
+        if (counts.get(char.toLowerCase()) > 1) {
+            result += char;
+        }
+    }
+    return result;
 }
 
 /*
@@ -84,6 +105,16 @@ export const keepRepeated = (str) => {
 */
 
 export const uniqueChars = (str) => {
+    const seen = new Set();
+    let result = "";
 
+    for (const char of str) {
+        const lower = char.toLowerCase();
+        if (!seen.has(lower)) {
+            seen.add(lower);
+            result += char;
+        }
+    }
+    return result;
 }
 
