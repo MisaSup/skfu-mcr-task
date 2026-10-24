@@ -1,0 +1,195 @@
+TAP version 13
+# Subtest: example insertionSort
+ok 1 - example insertionSort
+  ---
+  duration_ms: 0.586
+  type: 'test'
+  ...
+# Subtest: example insertionSort does not mutate the source array
+ok 2 - example insertionSort does not mutate the source array
+  ---
+  duration_ms: 0.059166
+  type: 'test'
+  ...
+# Subtest: task-optional-00 factorial
+ok 3 - task-optional-00 factorial
+  ---
+  duration_ms: 0.35175
+  type: 'test'
+  ...
+# Subtest: task-optional-01 fibonacci
+ok 4 - task-optional-01 fibonacci
+  ---
+  duration_ms: 0.074875
+  type: 'test'
+  ...
+# Subtest: task-optional-02 isFalsy
+ok 5 - task-optional-02 isFalsy
+  ---
+  duration_ms: 0.784416
+  type: 'test'
+  ...
+# Subtest: task-optional-03 palindrome
+ok 6 - task-optional-03 palindrome
+  ---
+  duration_ms: 0.45975
+  type: 'test'
+  ...
+# Subtest: task-optional-04 keepRepeated
+ok 7 - task-optional-04 keepRepeated
+  ---
+  duration_ms: 0.101333
+  type: 'test'
+  ...
+# Subtest: task-optional-05 uniqueChars
+ok 8 - task-optional-05 uniqueChars
+  ---
+  duration_ms: 0.067875
+  type: 'test'
+  ...
+# Hello, World!
+# Subtest: task-00 helloWorld
+ok 9 - task-00 helloWorld
+  ---
+  duration_ms: 1.184458
+  type: 'test'
+  ...
+# Subtest: task-01 getString
+ok 10 - task-01 getString
+  ---
+  duration_ms: 0.097834
+  type: 'test'
+  ...
+# Subtest: task-02 getLength, getFirst, getLast, pushElement, popElement
+    # Subtest: getLength
+    ok 1 - getLength
+      ---
+      duration_ms: 0.068084
+      type: 'test'
+      ...
+    # Subtest: getFirst
+    ok 2 - getFirst
+      ---
+      duration_ms: 0.048708
+      type: 'test'
+      ...
+    # Subtest: getLast
+    ok 3 - getLast
+      ---
+      duration_ms: 0.047708
+      type: 'test'
+      ...
+    # Subtest: pushElement
+    ok 4 - pushElement
+      ---
+      duration_ms: 0.350208
+      type: 'test'
+      ...
+    # Subtest: popElement
+    ok 5 - popElement
+      ---
+      duration_ms: 0.048
+      type: 'test'
+      ...
+    1..5
+ok 11 - task-02 getLength, getFirst, getLast, pushElement, popElement
+  ---
+  duration_ms: 0.870958
+  type: 'test'
+  ...
+# Subtest: task-03 getAnimalDescription
+ok 12 - task-03 getAnimalDescription
+  ---
+  duration_ms: 0.077667
+  type: 'test'
+  ...
+# Subtest: task-04 getObjKeys, getObjValues
+    # Subtest: getObjKeys
+    ok 1 - getObjKeys
+      ---
+      duration_ms: 0.078917
+      type: 'test'
+      ...
+    # Subtest: getObjValues
+    ok 2 - getObjValues
+      ---
+      duration_ms: 0.051292
+      type: 'test'
+      ...
+    1..2
+ok 13 - task-04 getObjKeys, getObjValues
+  ---
+  duration_ms: 0.261375
+  type: 'test'
+  ...
+# Subtest: task-05 patchObj
+ok 14 - task-05 patchObj
+  ---
+  duration_ms: 0.097541
+  type: 'test'
+  ...
+# Subtest: task-06 deleteItem
+    # Subtest: delete non existing item
+    ok 1 - delete non existing item
+      ---
+      duration_ms: 0.04875
+      type: 'test'
+      ...
+    # Subtest: delete existing item
+    ok 2 - delete existing item
+      ---
+      duration_ms: 0.061667
+      type: 'test'
+      ...
+    1..2
+ok 15 - task-06 deleteItem
+  ---
+  duration_ms: 0.188375
+  type: 'test'
+  ...
+# Subtest: task-07 multiplyByTwo
+ok 16 - task-07 multiplyByTwo
+  ---
+  duration_ms: 0.8265
+  type: 'test'
+  ...
+# Subtest: task-08 getAssessments
+ok 17 - task-08 getAssessments
+  ---
+  duration_ms: 0.119833
+  type: 'test'
+  ...
+# Subtest: task-09 hasBoolean, isStringArray
+    # Subtest: hasBoolean
+    ok 1 - hasBoolean
+      ---
+      duration_ms: 0.073458
+      type: 'test'
+      ...
+    # Subtest: isStringArray
+    ok 2 - isStringArray
+      ---
+      duration_ms: 0.049875
+      type: 'test'
+      ...
+    1..2
+ok 18 - task-09 hasBoolean, isStringArray
+  ---
+  duration_ms: 0.241208
+  type: 'test'
+  ...
+# Subtest: task-10 return2007
+ok 19 - task-10 return2007
+  ---
+  duration_ms: 0.099625
+  type: 'test'
+  ...
+1..19
+# tests 30
+# suites 0
+# pass 30
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 64.800583
