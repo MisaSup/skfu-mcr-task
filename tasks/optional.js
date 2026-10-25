@@ -37,8 +37,8 @@ export const fibonacci = (index) => {
 */
 
 export const isFalsy = (value) => {
-    
-}
+  return !value;
+};
 
 /*
     task-optional-03
