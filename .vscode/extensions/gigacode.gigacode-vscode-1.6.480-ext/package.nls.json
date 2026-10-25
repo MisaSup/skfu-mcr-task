@@ -1,0 +1,21 @@
+{
+  "gigacode.description": "Brand-new GigaCode Autocompletion - Boost Your Coding Speed and Efficiency",
+  "gigacode.showCompletionsInline.description": "Invoke completions automatically. If on, then AI completions goes as you type, otherwise it can be invoked by using a keyboard shortcut",
+  "gigacode.inlineHints.description": "Enable inline hints",
+  "gigacode.lookupPriority.description": "Prioritizing the selection of lookup hints over inline GigaCode suggestions",
+  "gigacode.common.wholeLineReplacement.description": "Replaces the code up to the end of the line with an accepted GigaCode suggestion",
+  "gigacode.common.useProjectContext.description": "Use relevant project context for AI completion generation",
+  "gigacode.common.useProjectContextWithOpenTabsPriority.description": "Use relevant project context with open tabs context priority for AI completion generation. This setting only has an effect when `#gigacode.common.useProjectContext#` is on",
+  "gigacode.common.enableCodeChatImprovements.description": "Automatically send my CodeChat dialogues for product improvements",
+  "gigacode.docs.open.command.description": "Documentation",
+  "gigacode.feedback.command.description": "Leave a feedback",
+  "gigacode.settings.open.command.description": "Settings",
+  "gigacode.version.check.command.description": "Check for Updates...",
+  "gigacode.chat.loggingInformationMessage.command.description": "Chat Logging Information Message",
+  "gigacode.chat.loggingInformationMessage.clear.command.description": "Clear Chat Logging Information Message",
+  "gigacode.cloudIdentify.description": "Enable this setting if you are cloud.ru user",
+  "gigacode.new.chat.command.description": "New Chat",
+  "gigacode.chat.history.command.description": "History",
+  "gigacode.menu.open.command.description": "Menu",
+  "gigacode.chatCodebase.showInfo.description": "Show ChatCodeBase index information"
+}

@@ -1,0 +1,46 @@
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.menu-block-wrapper:first-child {
+  padding-bottom: 10px;
+  border-bottom: 1.5px solid var(--vscode-tab-border);
+}
+
+.menu-item-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.menu-item-wrapper__stats {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 10px;
+}
+
+.menu-item-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu-item-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  opacity: 0.5;
+  align-items: flex-start;
+}
+
+.menu-stats-list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 5px 0;
+}

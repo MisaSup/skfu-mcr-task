@@ -1,0 +1,21 @@
+{
+  "gigacode.description": "Интеллектуальный помощник GigaCode, ускоряющий разработку кода",
+  "gigacode.showCompletionsInline.description": "Вызывать подсказки автоматически. Если включено, то подсказки появляются при печати, иначе они могут быть вызваны через горячие клавиши",
+  "gigacode.inlineHints.description": "Включить Inline Hints",
+  "gigacode.lookupPriority.description": "Приоритет Lookup-подсказки",
+  "gigacode.common.wholeLineReplacement.description": "Заменять код подсказкой до конца строки",
+  "gigacode.common.useProjectContext.description": "Использовать подходящий контекст проекта для генерации ИИ-подсказок",
+  "gigacode.common.useProjectContextWithOpenTabsPriority.description": "Использовать подходящий контекст с приоритетом контекста из открытых вкладок для генерации ИИ-подсказок. Эта настройка имеет эффект только когда `#gigacode.common.useProjectContext#` включено",
+  "gigacode.common.enableCodeChatImprovements.description": "Автоматически отправлять мои диалоги CodeChat для улучшения продукта",
+  "gigacode.docs.open.command.description": "Документация",
+  "gigacode.feedback.command.description": "Оставить обратную связь",
+  "gigacode.settings.open.command.description": "Настройки",
+  "gigacode.version.check.command.description": "Проверка обновлений...",
+  "gigacode.chat.loggingInformationMessage.command.description": "Показать сообщение о сборе данных диалогов чата",
+  "gigacode.chat.loggingInformationMessage.clear.command.description": "Очистить информацию о показе сообщения о сборе данных диалогов чата",
+  "gigacode.cloudIdentify.description": "Включите эту настройку если вы пользователь cloud.ru",
+  "gigacode.new.chat.command.description": "Новый чат",
+  "gigacode.chat.history.command.description": "История",
+  "gigacode.menu.open.command.description": "Меню",
+  "gigacode.chatCodebase.showInfo.description": "Показать информацию ChatCodeBase index"
+}

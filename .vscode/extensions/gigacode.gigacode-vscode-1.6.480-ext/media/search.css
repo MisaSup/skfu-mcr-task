@@ -1,0 +1,45 @@
+*,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--vscode-editor-background);
+}
+
+code {
+  padding: 0;
+  color: unset;
+  background-color: unset;
+  border-radius: unset;
+}
+
+.search-query {
+  display: flex;
+}
+
+.search-results__item {
+  position: relative;
+  margin-top: 10px;
+  background-color: var(--vscode-input-background);
+  padding: 10px;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+}
+
+.search-results__item:hover {
+  background-color: var(--vscode-editorLink-activeForeground);
+}
+
+.search-result__code {
+  margin-top: 10px;
+}
+
+.search-result__filename {
+  overflow: auto;
+  margin-right: 25px;
+}
+
+.search-result__level {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}

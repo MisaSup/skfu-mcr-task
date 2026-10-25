@@ -1,0 +1,398 @@
+{
+	"name": "gigacode-vscode",
+	"publisher": "GigaCode",
+	"displayName": "GigaCode: AI-Powered Coding Assistant",
+	"description": "%gigacode.description%",
+	"version": "1.6.480-ext",
+	"author": "GigaCode <gigacode@sberbank.ru>",
+	"contributors": [
+		"Ilya Shuklin <iashuklin@sberbank.ru>",
+		"Ekaterina Zharovova <eanazharovova@sberbank.ru>"
+	],
+	"engines": {
+		"vscode": "^1.74.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://stash.sigma.sbrf.ru/projects/AICODE/repos/code-completion-vscode-plugin"
+	},
+	"bugs": {
+		"email": "support@gitverse.ru"
+	},
+	"categories": [
+		"Machine Learning",
+		"Programming Languages",
+		"Snippets",
+		"Education",
+		"Other"
+	],
+	"keywords": [
+		"javascript",
+		"python",
+		"typescript",
+		"php",
+		"autocomplete",
+		"chat",
+		"code completion",
+		"ruby",
+		"java",
+		"go",
+		"golang",
+		"bash",
+		"kotlin",
+		"html",
+		"css",
+		"ocaml",
+		"perl",
+		"rust",
+		"julia",
+		"lua",
+		"haskell",
+		"c",
+		"cpp",
+		"c++",
+		"csharp",
+		"c#",
+		"react",
+		"swift",
+		"method completion",
+		"intellicode",
+		"intellisense",
+		"snippets",
+		"jupyter",
+		"nodejs",
+		"node",
+		"node.js",
+		"documentation",
+		"AI",
+		"AI-assisted code completion",
+		"AI-powered coding assistant",
+		"code suggestion",
+		"code prediction",
+		"unit test generation",
+		"documentation generation"
+	],
+	"activationEvents": [
+		"onStartupFinished"
+	],
+	"icon": "gigacode-icon.png",
+	"license": "SEE LICENSE IN LICENSE",
+	"main": "./out/extension.js",
+	"l10n": "./l10n",
+	"contributes": {
+		"icons": {
+			"gigacode-icon": {
+				"description": "GigaCode icon",
+				"default": {
+					"fontPath": "gigacode.woff",
+					"fontCharacter": "\\E900"
+				}
+			}
+		},
+		"commands": [
+			{
+				"command": "gigacode.new.chat",
+				"title": "%gigacode.new.chat.command.description%",
+				"icon": "$(add)",
+				"category": "GigaCode"
+			},
+			{
+				"command": "gigacode.chat.history.open",
+				"title": "%gigacode.chat.history.command.description%",
+				"icon": "$(comment-discussion)",
+				"category": "GigaCode"
+			},
+			{
+				"command": "gigacode.menu.open",
+				"title": "%gigacode.menu.open.command.description%",
+				"icon": "$(menu)",
+				"category": "GigaCode"
+			},
+			{
+				"command": "gigacode.docs.open",
+				"title": "%gigacode.docs.open.command.description%",
+				"category": "GigaCode"
+			},
+			{
+				"command": "gigacode.settings.open",
+				"title": "%gigacode.settings.open.command.description%",
+				"category": "GigaCode"
+			},
+			{
+				"command": "gigacode.version.check",
+				"title": "%gigacode.version.check.command.description%",
+				"category": "GigaCode"
+			},
+			{
+				"command": "gigacode.chat.loggingInformationMessage",
+				"title": "%gigacode.chat.loggingInformationMessage.command.description%",
+				"category": "GigaCode"
+			},
+			{
+				"command": "gigacode.chat.loggingInformationMessage.clear",
+				"title": "%gigacode.chat.loggingInformationMessage.clear.command.description%",
+				"category": "GigaCode",
+				"enablement": "isDebug"
+			},
+			{
+				"command": "gigacode.chatCodebase.showInfo",
+				"title": "%gigacode.chatCodebase.showInfo.description%",
+				"category": "GigaCode",
+				"enablement": "isDebug"
+			}
+		],
+		"menus": {
+			"view/title": [
+				{
+					"command": "gigacode.new.chat",
+					"group": "navigation@0",
+					"when": "view == gigacode.sidebar"
+				},
+				{
+					"command": "gigacode.chat.history.open",
+					"group": "navigation@1",
+					"when": "view == gigacode.sidebar"
+				},
+				{
+					"command": "gigacode.menu.open",
+					"group": "navigation@2",
+					"when": "view == gigacode.sidebar"
+				}
+			]
+		},
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "gigacode",
+					"title": "GigaCode",
+					"icon": "gigacode-icon.png"
+				}
+			]
+		},
+		"views": {
+			"gigacode": [
+				{
+					"type": "webview",
+					"id": "gigacode.sidebar",
+					"name": "GigaCode",
+					"icon": "gigacode-icon.png",
+					"contextualTitle": "GigaCode"
+				}
+			]
+		},
+		"configuration": [
+			{
+				"title": "Autocompletion",
+				"properties": {
+					"gigacode.showCompletionsInline": {
+						"type": "boolean",
+						"markdownDescription": "%gigacode.showCompletionsInline.description%",
+						"default": true,
+						"order": 1
+					},
+					"gigacode.inlineCompletionColor": {
+						"type": "string",
+						"enum": [
+							"red",
+							"pink",
+							"yellow",
+							"green",
+							"blue"
+						],
+						"order": 2
+					},
+					"gigacode.inlineHints": {
+						"type": "boolean",
+						"default": true,
+						"description": "%gigacode.inlineHints.description%",
+						"order": 3
+					},
+					"gigacode.lookupPriority": {
+						"type": "boolean",
+						"default": false,
+						"description": "%gigacode.lookupPriority.description%",
+						"order": 4
+					},
+					"gigacode.common.wholeLineReplacement": {
+						"type": "boolean",
+						"description": "%gigacode.common.wholeLineReplacement.description%",
+						"default": false,
+						"order": 5
+					}
+				}
+			},
+			{
+				"title": "CodeChat",
+				"properties": {}
+			},
+			{
+				"title": "Cloud.ru Identification",
+				"properties": {
+					"gigacode.cloudIdentify": {
+						"type": "boolean",
+						"description": "%gigacode.cloudIdentify.description%",
+						"default": false
+					}
+				}
+			}
+		],
+		"keybindings": [
+			{
+				"key": "right",
+				"command": "gigacode.inlineSuggest.hide",
+				"when": "editorTextFocus && inlineSuggestionVisible"
+			},
+			{
+				"key": "delete",
+				"command": "gigacode.inlineSuggest.hide",
+				"when": "editorTextFocus && inlineSuggestionVisible"
+			},
+			{
+				"key": "Escape",
+				"command": "gigacode.inlineSuggest.hideViaEsc",
+				"when": "editorTextFocus && inlineSuggestionVisible"
+			},
+			{
+				"key": "cmd+right",
+				"command": "gigacode.inlineSuggest.acceptNextWord",
+				"when": "editorTextFocus && inlineSuggestionVisible"
+			},
+			{
+				"key": "shift+tab",
+				"command": "gigacode.inlineSuggest.acceptNextLine",
+				"when": "editorTextFocus && inlineSuggestionVisible"
+			},
+			{
+				"key": "alt+[",
+				"command": "gigacode.inlineSuggest.showPrevious",
+				"when": "editorTextFocus && inlineSuggestionVisible"
+			},
+			{
+				"key": "alt+]",
+				"command": "gigacode.inlineSuggest.showNext",
+				"when": "editorTextFocus && inlineSuggestionVisible"
+			},
+			{
+				"key": "tab",
+				"command": "editor.action.inlineSuggest.commit",
+				"when": "!config.gigacode.lookupPriority && inlineSuggestionVisible && !editorTabMovesFocus"
+			},
+			{
+				"key": "alt+\\",
+				"command": "gigacode.inlineSuggest.trigger",
+				"when": "editorTextFocus"
+			},
+			{
+				"key": "meta+y",
+				"command": "gigacode.chat.focus",
+				"when": "editorTextFocus"
+			},
+			{
+				"key": "meta+y",
+				"command": "workbench.action.focusActiveEditorGroup",
+				"when": "!editorTextFocus"
+			},
+			{
+				"key": "delete",
+				"command": "gigacode.deleteRightOverride",
+				"when": "textInputFocus"
+			},
+			{
+				"key": "backspace",
+				"command": "gigacode.deleteLeftOverride",
+				"when": "textInputFocus"
+			}
+		],
+		"languages": [
+			{
+				"id": "bsl",
+				"extensions": [
+					".bsl"
+				],
+				"aliases": [
+					"1C"
+				]
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "webpack --mode production",
+		"compile": "webpack --mode development --watch",
+		"pretest": "npm run lint",
+		"lint": "eslint src --ext ts",
+		"test": "mocha",
+		"coverage": "c8 --check-coverage npm run test",
+		"package": "vsce package",
+		"prebuild": "node ./prebuild.js",
+		"build": "webpack --mode production"
+	},
+	"devDependencies": {
+		"@types/chai": "4.3.4",
+		"@types/cron": "1.7.3",
+		"@types/debounce": "1.2.1",
+		"@types/glob": "7.2.0",
+		"@types/levenshtein": "1.0.3",
+		"@types/lodash": "4.14.191",
+		"@types/mocha": "9.1.1",
+		"@types/node": "14.18.37",
+		"@types/node-fetch": "2.6.2",
+		"@types/object-hash": "3.0.4",
+		"@types/react-mentions": "4.4.1",
+		"@types/semver": "7.3.13",
+		"@types/uuid": "8.3.4",
+		"@typescript-eslint/eslint-plugin": "5.54.0",
+		"@typescript-eslint/parser": "5.54.0",
+		"@vscode/test-electron": "1.6.2",
+		"c8": "7.13.0",
+		"chai": "4.3.7",
+		"eslint": "8.35.0",
+		"eslint-plugin-react-hooks": "4.6.2",
+		"glob": "7.2.3",
+		"mocha": "9.2.2",
+		"terser-webpack-plugin": "5.3.9",
+		"traverse": "0.6.7",
+		"ts-loader": "9.4.4",
+		"ts-node": "10.9.1",
+		"typescript": "4.9.5",
+		"webpack": "5.88.2",
+		"webpack-cli": "5.1.4"
+	},
+	"dependencies": {
+		"@langchain/core": "0.3.36",
+		"@langchain/textsplitters": "0.1.0",
+		"@sber-jarvis/jarvis": "1.0.92",
+		"@types/react": "18.2.48",
+		"@types/react-dom": "18.2.18",
+		"@types/react-syntax-highlighter": "15.5.11",
+		"@vscode/l10n": "0.0.18",
+		"@vscode/vsce": "2.19.0",
+		"abort-controller": "3.0.0",
+		"axios": "1.7.4",
+		"classnames": "2.5.1",
+		"cron": "1.8.2",
+		"debounce": "1.2.1",
+		"highlight.js": "11.8.0",
+		"ignore": "6.0.2",
+		"levenshtein": "1.0.5",
+		"lodash": "4.17.21",
+		"marked": "13.0.3",
+		"mathjs": "14.0.1",
+		"node-fetch": "2.6.9",
+		"object-hash": "3.0.0",
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"react-markdown": "9.0.1",
+		"react-mentions": "4.4.10",
+		"react-router": "6.28.2",
+		"react-switch": "7.1.0",
+		"react-syntax-highlighter": "15.5.0",
+		"react-textarea-autosize": "8.5.3",
+		"semver": "7.3.8",
+		"uuid": "8.3.2",
+		"xml2js": "0.5.0"
+	},
+	"__metadata": {
+		"installedTimestamp": 1741241653647,
+		"size": 13173462
+	}
+}

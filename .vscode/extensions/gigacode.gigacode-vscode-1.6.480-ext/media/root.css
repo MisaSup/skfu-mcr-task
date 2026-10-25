@@ -1,0 +1,86 @@
+*,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow: hidden;
+  animation: fadeIn ease-in 0.1s backwards;
+}
+
+.loader {
+  display: flex;
+  justify-content: flex-start;
+  gap: 4px;
+  padding: 15px 0;
+
+  div {
+    width: 5px;
+    height: 5px;
+    background: var(--vscode-foreground);
+    opacity: 0.5;
+    border-radius: 50%;
+    animation: 0.9s bounce infinite alternate;
+
+    &:nth-child(2) {
+      animation-delay: 0.3s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: 0.6s;
+    }
+  }
+}
+
+.tab-wrapper,
+.layout-inner {
+  overflow: hidden;
+  animation: fadeIn ease-in 0.1s backwards;
+}
+
+.tab-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 15px;
+}
+
+.tab-wrapper hr {
+  border: none;
+  border-top: 1.5px solid var(--vscode-tab-border);
+}
+
+.tab-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.btn-back {
+  padding: 15px;
+  font-size: var(--body-fs);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 5px;
+  border-bottom: 1.5px solid var(--vscode-tab-border);
+}
+
+@keyframes bounce {
+  to {
+    opacity: 0.3;
+    transform: translate3d(0, -0.3rem, 0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+}
