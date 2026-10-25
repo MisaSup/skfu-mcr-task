@@ -38,7 +38,7 @@ export const fibonacci = (index) => {
 
 export const isFalsy = (value) => {
   return !value;
-};
+}
 
 /*
     task-optional-03
@@ -50,9 +50,9 @@ export const isFalsy = (value) => {
 */
 
 export const palindrome = (str) => {
-
-}
-
+  const reversed = str.split('').reverse().join('');
+  return str === reversed;
+};
 /*
     task-optional-04
     Напишите функцию, которая принимает строку и оставляет только те символы,
