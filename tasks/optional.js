@@ -101,6 +101,15 @@ export const keepRepeated = (str) => {
 */
 
 export const uniqueChars = (str) => {
-
-}
-
+  const seen = new Set();
+  let result = '';
+  
+  for (const char of str) {
+    const lowerChar = char.toLowerCase();
+    if (!seen.has(lowerChar)) {
+      seen.add(lowerChar);
+      result += char; 
+    }
+  }
+  return result;
+};
