@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой Профиль — 3D Выставка</title>
+    <link rel="icon" href="https://flaticon.com" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header>
+        <div class="header-container">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Blender_logo_no_text.svg/1280px-Blender_logo_no_text.svg.png" alt="3D Logo" class="logo">
+            <h1>Рабочее пространство автора</h1>
+        </div>
+    </header>
+
+    <!-- Навигация -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html">Главная</a>
+            <a href="form.html">Стать участником</a>
+            <a href="profile.html" class="active">Мой Профиль</a>
+        </div>
+    </nav>
+
+    <!-- Основной контент (Карточка Профиля) -->
+    <main>
+        <div class="profile-container">
+            
+            <section class="profile-card">
+                <h2>Личные данные аккаунта</h2>
+                
+                <!-- Аватарка автора -->
+                <div class="profile-avatar-container">
+                    <img src="https://unsplash.com" alt="Аватар автора" class="profile-avatar">
+                </div>
+
+                <!-- Вывод данных -->
+                <div class="profile-details">
+                    <p><strong>Имя автора / Тег:</strong> Maxonpunk</p>
+                    <p><strong>Email привязки:</strong> medkovms@study.local</p>
+                    <p><strong>Личный рекорд сцены:</strong> 10 тыс. полигонов</p>
+                    <p><strong>Дата последней активности:</strong> 04.10.2026</p>
+                    <p><strong>Используемый софт:</strong> Blender 4.x</p>
+                    <p><strong>Предпочтительный движок:</strong> Cycles</p>
+                    <p><strong>О себе / Текущий воркфлоу:</strong> Занимаюсь скульптингом, созданием low-poly моделей и персонажей.</p>
+                </div>
+            </section>
+
+            <!-- Обязательный блок изменения пароля -->
+            <section class="security-card">
+                <h3>Безопасность учетной записи</h3>
+                <p class="security-desc">Для обновления токенов доступа к рендер-ферме измените текущий пароль.</p>
+                
+                <form action="#" method="POST" class="blender-form">
+                    <div class="form-group">
+                        <label for="old_pass">Введите старый пароль:</label>
+                        <input type="password" id="old_pass" name="old_password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="new_pass">Введите новый паро|ль:</label>
+                        <input type="password" id="new_pass" name="new_password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm_pass">Повторите новый пароль:</label>
+                        <input type="password" id="confirm_pass" name="confirm_password" required>
+                    </div>
+                    <input type="submit" value="Применить новый пароль" class="btn-submit security-btn">
+                </form>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer>
+        <div class="footer-container">
+            <p>Панель управления 3D-Выставкой | Лабораторная работа по веб-разработке</p>
+        </div>
+    </footer>
+
+</body>
+</html>
