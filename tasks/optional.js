@@ -69,8 +69,21 @@ export const palindrome = (str) => {
 */
 
 export const keepRepeated = (str) => {
+  const counts = new Map();
+  const lowerStr = str.toLowerCase();
 
-}
+  for (const char of lowerStr) {
+    counts.set(char, (counts.get(char) || 0) + 1);
+  }
+
+  let result = '';
+  for (let i = 0; i < str.length; i++) {
+    if (counts.get(lowerStr[i]) > 1) {
+      result += str[i]; 
+    }
+  }
+  return result;
+};
 
 /*
     task-optional-05
