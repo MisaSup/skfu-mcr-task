@@ -8,7 +8,9 @@
 */
 
 export const helloWorld = () => {
-
+    const word = "Hello, World!"
+    console.log(word)
+    return word
 }
 
 /*
@@ -17,7 +19,7 @@ export const helloWorld = () => {
 */
 
 export const getString = (str) => {
-
+    return str
 }
 
 /*
@@ -30,23 +32,24 @@ export const getString = (str) => {
 */
 
 export const getLength = (arr) => {
-
+    return arr.length
 }
 
 export const getFirst = (arr) => {
-
+    return arr[0]
 }
 
 export const getLast = (arr) => {
-
+    return arr.at(-1)
 }
 
 export const pushElement = (arr, elem) => {
-
+    arr.push(elem)
+    return arr
 }
 
 export const popElement = (arr) => {
-
+    return arr.pop()
 }
 
 /*
@@ -65,7 +68,8 @@ export const popElement = (arr) => {
 */
 
 export const getAnimalDescription = (obj) => {
-
+    const {animal, legs, color} = obj
+    return `The ${color} ${animal} has ${legs} legs`
 }
 
 /*
@@ -73,11 +77,11 @@ export const getAnimalDescription = (obj) => {
 */
 
 export const getObjKeys = (obj) => {
-
+    return Object.keys(obj)
 }
 
 export const getObjValues = (obj) => {
-
+    return Object.values(obj)
 }
 
 /*
@@ -88,7 +92,11 @@ export const getObjValues = (obj) => {
 */
 
 export const patchObj = (obj, updates) => {
-
+    for (const key of Object.keys(updates)){
+        obj[key] = updates[key]
+    }
+    const result = { ...obj }
+    return result
 }
 
 /*
@@ -98,7 +106,13 @@ export const patchObj = (obj, updates) => {
 */
 
 export const deleteItem = (arr, item) => {
-
+    let arr2 = []
+    for (const el of arr){
+        if (el !== item){
+            arr2.push(el)
+        }
+    }
+    return arr2
 }
 
 /*
@@ -106,7 +120,8 @@ export const deleteItem = (arr, item) => {
 */
 
 export const multiplyByTwo = (arr) => {
-
+    arr = arr.map((n) => n * 2)
+    return arr
 }
 
 /*
@@ -121,7 +136,22 @@ export const multiplyByTwo = (arr) => {
 */
 
 export const getAssessments = (arr) => {
-
+    let grades = {5: 0, 4: 0, 3: 0, 2: 0}
+    for (const el of arr){
+        if (el == 10){
+            grades[5] += 1
+        }
+        else if (8 <= el && el <= 9){
+            grades[4] += 1
+        }
+        else if (5 <= el && el <= 7){
+            grades[3] += 1
+        }
+        else if (0 <= el && el <= 4){
+            grades[2] += 1
+        }
+    }
+    return grades
 }
 
 /*
@@ -132,11 +162,11 @@ export const getAssessments = (arr) => {
 */
 
 export const hasBoolean = (arr) => {
-
+    return arr.some((el) => typeof el === 'boolean')
 }
 
 export const isStringArray = (arr) => {
-
+    return arr.length > 0 && arr.every((el) => typeof el === 'string')
 }
 
 /*
@@ -149,7 +179,10 @@ export const isStringArray = (arr) => {
 */
 
 export const return2007 = (str) => {
-
+    const replaced = str.replace(/В/g, 'Ф').replace(/в/g, 'ф')
+    const symbols = replaced.split('')
+    let evenUpper = symbols.map((ch, i) => (i % 2 === 0 ? ch.toUpperCase() : ch.toLowerCase()))
+    return evenUpper.join('') + ':*'
 }
 
 
