@@ -8,8 +8,9 @@
 */
 
 export const factorial = (n) => {
-
-}
+  if (n <= 1) return 1;
+  return n * factorial(n - 1);
+};
 
 /*
     task-optional-01
@@ -22,8 +23,11 @@ export const factorial = (n) => {
 */
 
 export const fibonacci = (index) => {
-
-}
+  if (index < 0) return -1;
+  if (index === 0) return 0;
+  if (index === 1) return 1;
+  return fibonacci(index - 1) + fibonacci(index - 2);
+};
 
 /*
     task-optional-02
@@ -33,7 +37,7 @@ export const fibonacci = (index) => {
 */
 
 export const isFalsy = (value) => {
-    
+  return !value;
 }
 
 /*
@@ -46,9 +50,9 @@ export const isFalsy = (value) => {
 */
 
 export const palindrome = (str) => {
-
-}
-
+  const reversed = str.split('').reverse().join('');
+  return str === reversed;
+};
 /*
     task-optional-04
     Напишите функцию, которая принимает строку и оставляет только те символы,
@@ -65,8 +69,21 @@ export const palindrome = (str) => {
 */
 
 export const keepRepeated = (str) => {
+  const counts = new Map();
+  const lowerStr = str.toLowerCase();
 
-}
+  for (const char of lowerStr) {
+    counts.set(char, (counts.get(char) || 0) + 1);
+  }
+
+  let result = '';
+  for (let i = 0; i < str.length; i++) {
+    if (counts.get(lowerStr[i]) > 1) {
+      result += str[i]; 
+    }
+  }
+  return result;
+};
 
 /*
     task-optional-05
@@ -84,6 +101,15 @@ export const keepRepeated = (str) => {
 */
 
 export const uniqueChars = (str) => {
-
-}
-
+  const seen = new Set();
+  let result = '';
+  
+  for (const char of str) {
+    const lowerChar = char.toLowerCase();
+    if (!seen.has(lowerChar)) {
+      seen.add(lowerChar);
+      result += char; 
+    }
+  }
+  return result;
+};
