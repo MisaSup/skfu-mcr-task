@@ -134,7 +134,7 @@ export const isStringArray = (arr) =>
 export const return2007 = (str) => {
   const replaced = str.replace(/В/g, 'Ф').replace(/в/g, 'ф');
   const chars = replaced.split('');
-  const evenUpper = chars.map((ch, i) => (i % 2 === 0 ? ch.toUpperCase() : ch));
+  const evenUpper = chars.map((ch, i) => (i % 2 === 0 ? ch.toUpperCase() : ch.toLowerCase()));
   return evenUpper.join('') + ':*';
 };
 
