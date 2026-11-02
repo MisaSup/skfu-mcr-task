@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220">
+  <defs>
+    <linearGradient id="night" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d0f26"/>
+      <stop offset="1" stop-color="#3b3f8f"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="220" fill="url(#night)"/>
+  <g fill="#fff">
+    <circle cx="30" cy="30" r="1.5"/><circle cx="80" cy="60" r="1"/><circle cx="120" cy="20" r="2"/>
+    <circle cx="170" cy="70" r="1"/><circle cx="220" cy="30" r="1.5"/><circle cx="260" cy="80" r="1"/>
+    <circle cx="300" cy="25" r="1.2"/><circle cx="350" cy="55" r="2"/><circle cx="380" cy="15" r="1"/>
+    <circle cx="60" cy="110" r="1"/><circle cx="330" cy="110" r="1.2"/><circle cx="200" cy="120" r="1"/>
+  </g>
+  <polyline points="220,30 260,50 300,25 350,55" stroke="#f5c451" stroke-width="1" fill="none" opacity=".7"/>
+  <circle cx="330" cy="150" r="0" fill="none"/>
+  <path d="M60 40a26 26 0 1 0 22 40 22 22 0 1 1-22-40z" fill="#f5c451"/>
+  <path d="M0 220V170q60-30 120-10t130 0 150-20v80z" fill="#12142e"/>
+  <g transform="translate(250 150) rotate(-30)" fill="#c9ccf2">
+    <rect x="0" y="-7" width="70" height="14" rx="3"/>
+    <rect x="-10" y="-5" width="12" height="10" rx="2"/>
+  </g>
+  <path d="M268 165l-14 42M268 165l12 42M268 165v42" stroke="#c9ccf2" stroke-width="3"/>
+</svg>
