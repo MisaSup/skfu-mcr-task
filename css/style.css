@@ -221,25 +221,27 @@ h2 {
   color: #666666;
 }
 
-.profile-table {
-  width: 100%;
-  border-collapse: collapse;
+.profile-list {
+  margin: 0;
 }
 
-.profile-table td {
+.profile-row {
+  display: flex;
+  justify-content: space-between;
   padding: 8px 4px;
   border-bottom: 1px solid #e0e0e0;
 }
 
-.profile-table tr:last-child td {
+.profile-row:last-child {
   border-bottom: none;
 }
 
-.profile-table td:first-child {
+.profile-row dt {
   color: #666666;
 }
 
-.profile-table td:last-child {
+.profile-row dd {
+  margin: 0;
   text-align: right;
 }
 
