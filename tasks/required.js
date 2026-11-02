@@ -67,8 +67,7 @@ export const popElement = (arr) => {
     пример ответа: "The white cat has 4 legs"
 */
 
-export const getAnimalDescription = (obj) => {
-    const { animal, legs, color } = obj;
+export const getAnimalDescription = ({ animal, legs, color }) => {
     return `The ${color} ${animal} has ${legs} legs`;
 }
 
