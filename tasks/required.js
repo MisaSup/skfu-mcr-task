@@ -8,17 +8,18 @@
 */
 
 export const helloWorld = () => {
-
-}
+    const greeting = "Hello, World!";
+    console.log(greeting);
+    return greeting;
+};
 
 /*
     task-01
     Создайте функцию, которая принимает и возвращает эту же строку
 */
 
-export const getString = (str) => {
+export const getString = (str) => str;
 
-}
 
 /*
     task-02 напишите несколько функций для работы с массивами
@@ -29,25 +30,14 @@ export const getString = (str) => {
     5. popElement(arr)   удаляет последний элемент и возвращает удаленный элемент
 */
 
-export const getLength = (arr) => {
-
-}
-
-export const getFirst = (arr) => {
-
-}
-
-export const getLast = (arr) => {
-
-}
-
+export const getLength = (arr) => arr.length;
+export const getFirst = (arr) => arr[0];
+export const getLast = (arr) => arr[arr.length - 1];
 export const pushElement = (arr, elem) => {
-
-}
-
-export const popElement = (arr) => {
-
-}
+  arr.push(elem);
+  return arr;
+};
+export const popElement = (arr) => arr.pop();
 
 /*
     task-03 напишите функцию, которая принимает объект и склеивает из значений его свойст строку
@@ -65,21 +55,16 @@ export const popElement = (arr) => {
 */
 
 export const getAnimalDescription = (obj) => {
-
-}
+    const { animal, legs, color } = obj;
+    return `The ${color} ${animal} has ${legs} legs`;
+};
 
 /*
     task-04 Напишите две функции, которые принимают объект и возвращают ключи и значения объекта в виде массива 
 */
 
-export const getObjKeys = (obj) => {
-
-}
-
-export const getObjValues = (obj) => {
-
-}
-
+export const getObjKeys = (obj) => Object.keys(obj);
+export const getObjValues = (obj) => Object.values(obj);
 /*
     task-05 Напишите две функцию, которая добавляет новое свойство в объект или меняет существующее
     Функция принимает два объекта: объект который нужно обновить и объект со свойствами которые нужно добавить
@@ -87,9 +72,7 @@ export const getObjValues = (obj) => {
     Попробуйте spread оператор: https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 */
 
-export const patchObj = (obj, updates) => {
-
-}
+export const patchObj = (obj, updates) => ({ ...obj, ...updates });
 
 /*
     task-06 Напишите функцию, которая принимает массив и элемент, который нужно удалить
@@ -97,17 +80,13 @@ export const patchObj = (obj, updates) => {
     Если элемента нет в массиве просто возвращаем новую копию массива
 */
 
-export const deleteItem = (arr, item) => {
-
-}
+export const deleteItem = (arr, item) => arr.filter((el) => el !== item);
 
 /*
     task-07 Напишите функцию которая принимает массив чисел и возвращает новый массив где все числа умножены на 2
 */
 
-export const multiplyByTwo = (arr) => {
-
-}
+export const multiplyByTwo = (arr) => arr.map((n) => n * 2);
 
 /*
     task-08 Напишите функцию которая принимает массив c количеством выполненных заданий и возвращает объект с оценками за задание
@@ -121,8 +100,16 @@ export const multiplyByTwo = (arr) => {
 */
 
 export const getAssessments = (arr) => {
-
-}
+  return arr.reduce((acc, n) => {
+    let grade;
+    if (n === 10) grade = 5;
+    else if (n >= 8) grade = 4;
+    else if (n >= 5) grade = 3;
+    else grade = 2;
+    acc[grade] = (acc[grade] || 0) + 1;
+    return acc;
+  }, {});
+};
 
 /*
     task-09 Напишите две функции которые принимают массив и возвращают значение типа boolean
@@ -131,13 +118,9 @@ export const getAssessments = (arr) => {
     Для пустого массива isStringArray возвращает false
 */
 
-export const hasBoolean = (arr) => {
-
-}
-
-export const isStringArray = (arr) => {
-
-}
+export const hasBoolean = (arr) => arr.some((el) => typeof el === 'boolean');
+export const isStringArray = (arr) =>
+  arr.length > 0 && arr.every((el) => typeof el === 'string');
 
 /*
     task-10 Напишите функцию, которая принимает строку и возвращает измененную строку в эмо стиле
@@ -149,8 +132,11 @@ export const isStringArray = (arr) => {
 */
 
 export const return2007 = (str) => {
-
-}
+  const replaced = str.replace(/В/g, 'Ф').replace(/в/g, 'ф');
+  const chars = replaced.split('');
+  const evenUpper = chars.map((ch, i) => (i % 2 === 0 ? ch.toUpperCase() : ch.toLowerCase()));
+  return evenUpper.join('') + ':*';
+};
 
 
 

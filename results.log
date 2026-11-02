@@ -1,0 +1,43 @@
+✔ example insertionSort (1.4788ms)
+✔ example insertionSort does not mutate the source array (0.1625ms)
+✔ task-optional-00 factorial (0.8996ms)
+✔ task-optional-01 fibonacci (0.1687ms)
+✔ task-optional-02 isFalsy (0.2193ms)
+✔ task-optional-03 palindrome (0.1791ms)
+✔ task-optional-04 keepRepeated (0.2265ms)
+✔ task-optional-05 uniqueChars (0.1759ms)
+Hello, World!
+✔ task-00 helloWorld (2.3152ms)
+✔ task-01 getString (0.2144ms)
+▶ task-02 getLength, getFirst, getLast, pushElement, popElement
+  ✔ getLength (0.1644ms)
+  ✔ getFirst (0.1287ms)
+  ✔ getLast (0.1953ms)
+  ✔ pushElement (0.7686ms)
+  ✔ popElement (0.1441ms)
+✔ task-02 getLength, getFirst, getLast, pushElement, popElement (2.5841ms)
+✔ task-03 getAnimalDescription (0.2183ms)
+▶ task-04 getObjKeys, getObjValues
+  ✔ getObjKeys (0.2065ms)
+  ✔ getObjValues (0.1292ms)
+✔ task-04 getObjKeys, getObjValues (0.7043ms)
+✔ task-05 patchObj (0.2504ms)
+▶ task-06 deleteItem
+  ✔ delete non existing item (0.1258ms)
+  ✔ delete existing item (0.1421ms)
+✔ task-06 deleteItem (0.5361ms)
+✔ task-07 multiplyByTwo (0.131ms)
+✔ task-08 getAssessments (0.1788ms)
+▶ task-09 hasBoolean, isStringArray
+  ✔ hasBoolean (0.1538ms)
+  ✔ isStringArray (0.1067ms)
+✔ task-09 hasBoolean, isStringArray (0.5728ms)
+✔ task-10 return2007 (0.1689ms)
+ℹ tests 30
+ℹ suites 0
+ℹ pass 30
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 110.08
