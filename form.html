@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortis Club - Анкета</title>
+    <link rel="icon" href="https://icons8.com" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="phone-wrapper">
+        
+        <header class="site-header">
+            <img src="https://icons8.com" alt="Logo" class="logo">
+            <h1>Mortis Club</h1>
+        </header>
+
+        <nav class="site-nav">
+            <a href="index.html" class="nav-link">Главная</a>
+            <a href="form.html" class="nav-link active">Анкета</a>
+            <a href="profile.html" class="nav-link">Профиль</a>
+        </nav>
+
+        <main class="site-main">
+            <h2 class="page-title">Анкета кандидата</h2>
+            
+            <form action="#" method="POST" class="quiz-form">
+                
+                <div class="form-group">
+                    <label for="player-tag">Игровой тег (ID):</label>
+                    <input type="text" id="player-tag" name="player-tag" placeholder="#92LV90UU" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="useremail">Контактный Email:</label>
+                    <input type="email" id="useremail" name="useremail" placeholder="mortis@brawl.ru" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="userpassword">Пароль от аккаунта:</label>
+                    <input type="password" id="userpassword" name="userpassword" placeholder="••••••••" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="trophies">Количество кубков:</label>
+                    <input type="number" id="trophies" name="trophies" min="0" max="50000" placeholder="1250">
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-date">Дата начала игры:</label>
+                    <input type="date" id="reg-date" name="reg-date">
+                </div>
+
+                <div class="form-group">
+                    <label for="main-skin">Любимый скин:</label>
+                    <select id="main-skin" name="main-skin">
+                        <option value="default">Стандартный Мортис</option>
+                        <option value="tophat">Мортис в цилиндре</option>
+                        <option value="rogue">Коварный Мортис</option>
+                        <option value="mecha">Меха-Мортис</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Основной режим игры:</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="game-mode" value="3v3" checked>
+                            <span>Броулбол</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="game-mode" value="sd">
+                            <span>Столкновение</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="strategy">Твоя тактика игры:</label>
+                    <textarea id="strategy" name="strategy" rows="3" placeholder="Опишите тайминги ульты..."></textarea>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="agreement" name="agreement" required>
+                    <label for="agreement">Обязуюсь не делать автоатаку в стену</label>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="reset" class="btn btn-reset">Сбросить</button>
+                    <button type="submit" class="btn btn-submit">Отправить</button>
+                </div>
+
+            </form>
+        </main>
+
+        <footer class="site-footer">
+            <p>© 2026 Novikov G.A. | SKFU PMI</p>
+            <div class="footer-links">
+                <a href="https://github.com">GitHub</a>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+</html>
