@@ -1,64 +1,56 @@
-# EXPO-02
+# EXPO-03
 
-Продолжаем официальный туториал Expo и приложение **StickerSmash**. Это
-**вторая часть из трёх** — она продолжает задание **EXPO-01**.
+Завершаем официальный туториал Expo и приложение **StickerSmash**. Это
+**третья, финальная часть** — она продолжает задание **EXPO-02**.
 
 ## Предварительные требования
 
-- Полностью пройдено [EXPO-01](https://github.com/MisaSup/skfu-mcr-task/tree/task/EXPO-01):
-  приложение создано, добавлена навигация, собран первый экран.
-- Есть своя ветка `student/EXPO-01-{ФАМИЛИЯ ИО}` с кодом из первого этапа.
+- Полностью пройдены [EXPO-01](https://github.com/MisaSup/skfu-mcr-task/tree/task/EXPO-01)
+  и [EXPO-02](https://github.com/MisaSup/skfu-mcr-task/tree/task/EXPO-02):
+  есть экран с изображением, выбором эмодзи и наклейкой с жестами.
+- Есть своя ветка `student/EXPO-02-{ФАМИЛИЯ ИО}` с кодом из второго этапа.
 
-## Что нужно сделать в EXPO-02
+## Что нужно сделать в EXPO-03
 
-Пройти главы 4, 5 и 6 официального туториала:
+Пройти последние две главы официального туториала:
 
-1. **[Use an image picker](https://docs.expo.dev/tutorial/image-picker/)** —
-   дать пользователю выбрать изображение из медиатеки (`expo-image-picker`) и
-   показать его на экране.
-2. **[Create a modal](https://docs.expo.dev/tutorial/create-a-modal/)** —
-   сделать нижнюю панель (bottom sheet) с выбором эмодзи, список эмодзи и
-   наклейку-эмодзи поверх изображения.
-3. **[Add gestures](https://docs.expo.dev/tutorial/gestures/)** —
-   добавить жесты к наклейке: масштабирование двойным тапом и перетаскивание.
+1. **[Take a screenshot](https://docs.expo.dev/tutorial/screenshot/)** —
+   сохранить снимок экрана с наклейкой в медиатеку устройства (в веб — скачать
+   файл).
+2. **[Configure status bar, splash screen and app icon](https://docs.expo.dev/tutorial/configuration/)** —
+   настроить строку состояния, сплэш-экран и иконку приложения.
 
-Код продолжаем писать вместе с туториалом, поверх кода из EXPO-01.
+После этого приложение StickerSmash готово целиком.
 
 ## Работа с ветками
 
-EXPO-02 — продолжение EXPO-01, поэтому ветку создаём **от своей ветки
-EXPO-01**, а не от `main`:
+EXPO-03 — продолжение EXPO-02, поэтому ветку создаём **от своей ветки
+EXPO-02**:
 
 1. Создайте новую ветку от предыдущей:
 
    ```bash
-   git switch -c student/EXPO-02-{ФАМИЛИЯ ИО} student/EXPO-01-{ФАМИЛИЯ ИО}
+   git switch -c student/EXPO-03-{ФАМИЛИЯ ИО} student/EXPO-02-{ФАМИЛИЯ ИО}
 
    # например
-   git switch -c student/EXPO-02-gorelovma student/EXPO-01-gorelovma
+   git switch -c student/EXPO-03-gorelovma student/EXPO-02-gorelovma
    ```
 
 2. Делайте осмысленные коммиты по ходу прохождения глав:
 
    ```bash
    git add .
-   git commit -m "student/EXPO-02-gorelovma: chapter 4 image picker"
+   git commit -m "student/EXPO-03-gorelovma: chapter 7 screenshot"
    ```
 
-3. Когда EXPO-02 готов, запушьте ветку и откройте Pull Request
-   **в ветку `task/EXPO-02`**.
-
-4. Для следующего задания создавайте ветку **от своей ветки EXPO-02**:
-
-   ```bash
-   git switch -c student/EXPO-03-{ФАМИЛИЯ ИО} student/EXPO-02-{ФАМИЛИЯ ИО}
-   ```
+3. Когда EXPO-03 готов, запушьте ветку и откройте Pull Request
+   **в ветку `task/EXPO-03`**.
 
 > PR делается отдельно для каждого этапа. Не сливайте все главы в один коммит.
 
 ## Как сдать задание
 
-- PR в ветку `task/EXPO-02`.
+- PR в ветку `task/EXPO-03`.
 - В описании PR укажите: `[УНИВЕРСИТЕТ] [ФАМИЛИЯ ИМЯ] [ГРУППА]`.
 
 Подробнее про работу с репозиторием — в [README.md](README.md).
@@ -66,8 +58,7 @@ EXPO-01**, а не от `main`:
 ## Ресурсы
 
 - [Туториал Expo: введение](https://docs.expo.dev/tutorial/introduction/)
-- [Use an image picker](https://docs.expo.dev/tutorial/image-picker/)
-- [Create a modal](https://docs.expo.dev/tutorial/create-a-modal/)
-- [Add gestures](https://docs.expo.dev/tutorial/gestures/)
+- [Take a screenshot](https://docs.expo.dev/tutorial/screenshot/)
+- [Configure status bar, splash screen and app icon](https://docs.expo.dev/tutorial/configuration/)
 - [Исходники StickerSmash](https://github.com/expo/examples/tree/master/stickersmash)
 - [Презентации курса (Google Drive)](https://drive.google.com/drive/folders/1dQFBPJ4BL9fk2z7Z02mZG_nGh5jGCPN0?usp=sharing)
