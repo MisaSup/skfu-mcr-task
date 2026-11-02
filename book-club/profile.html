@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Профиль — Читальня</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <img src="logo.png" alt="Логотип Читальни" class="logo">
+    <nav class="main-nav">
+      <a href="index.html">Главная</a>
+      <a href="form.html">Анкета</a>
+      <a href="profile.html" class="active">Профиль</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <h1>Профиль участника</h1>
+
+    <div class="profile-card">
+      <img src="avatar.jpg" alt="Фото Эсмурзиева Магомеда" class="avatar">
+      <h2>Эсмурзиев Магомед Бекханович</h2>
+      <p class="profile-meta">Член клуба «Читальня»</p>
+    </div>
+
+    <section class="profile-section">
+      <h3>Личные данные</h3>
+      <dl class="data-list">
+        <dt>Имя</dt><dd>Эсмурзиев Магомед Бекханович</dd>
+        <dt>Прозвище</dt><dd>Гигачад</dd>
+        <dt>Email</dt><dd>esmurzievmagomed60@gmail.com</dd>
+        <dt>Возраст</dt><dd>18</dd>
+        <dt>Дата рождения</dt><dd>21.03.2008</dd>
+      </dl>
+    </section>
+
+    <section class="profile-section">
+      <h3>Литературные предпочтения</h3>
+      <dl class="data-list">
+        <dt>Любимый жанр</dt><dd>Фэнтези</dd>
+        <dt>Формат встреч</dt><dd>Офлайн</dd>
+        <dt>Интересы</dt><dd>Обсуждения, книгообмен</dd>
+        <dt>О себе</dt><dd>Люблю фэнтези книги и мангу.</dd>
+      </dl>
+    </section>
+
+    <section class="profile-section change-password">
+      <h3>Изменить пароль</h3>
+      <form id="password-form" class="password-form" action="#" method="post">
+        <label for="old-pass">Текущий пароль</label>
+        <input type="password" id="old-pass" name="old_pass" required>
+
+        <label for="new-pass">Новый пароль</label>
+        <input type="password" id="new-pass" name="new_pass" required minlength="6"
+               placeholder="Минимум 6 символов">
+
+        <label for="repeat-pass">Повторите новый пароль</label>
+        <input type="password" id="repeat-pass" name="repeat_pass" required minlength="6"
+               pattern="(?=.*\d)(?=.*[a-zа-я]).{6,}"
+               title="Пароль должен содержать минимум 6 символов, хотя бы одну букву и одну цифру">
+
+        <button type="submit" class="btn">Сохранить пароль</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <img src="logo.png" alt="Логотип" class="footer-logo">
+    <nav class="footer-nav">
+      <a href="index.html">Главная</a>
+      <a href="form.html">Анкета</a>
+      <a href="profile.html">Профиль</a>
+    </nav>
+    <p class="contact">Связь: esmurzievmagomed60@gmail.com</p>
+    <p class="copyright">© 2025 Эсмурзиев Магомед Бекханович</p>
+  </footer>
+</body>
+</html>
