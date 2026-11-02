@@ -8,7 +8,9 @@
 */
 
 export const helloWorld = () => {
-
+    const hello = "Hello, World!";
+    console.log(hello);
+    return hello;
 }
 
 /*
@@ -17,7 +19,7 @@ export const helloWorld = () => {
 */
 
 export const getString = (str) => {
-
+    return str;
 }
 
 /*
@@ -30,23 +32,24 @@ export const getString = (str) => {
 */
 
 export const getLength = (arr) => {
-
+    return arr.length;
 }
 
 export const getFirst = (arr) => {
-
+    return arr[0];
 }
 
 export const getLast = (arr) => {
-
+    return arr[arr.length - 1];
 }
 
 export const pushElement = (arr, elem) => {
-
+    arr.push(elem);
+    return arr;
 }
 
 export const popElement = (arr) => {
-
+    return arr.pop();
 }
 
 /*
@@ -64,8 +67,8 @@ export const popElement = (arr) => {
     пример ответа: "The white cat has 4 legs"
 */
 
-export const getAnimalDescription = (obj) => {
-
+export const getAnimalDescription = ({ animal, legs, color }) => {
+    return `The ${color} ${animal} has ${legs} legs`;
 }
 
 /*
@@ -73,11 +76,11 @@ export const getAnimalDescription = (obj) => {
 */
 
 export const getObjKeys = (obj) => {
-
+    return Object.keys(obj);
 }
 
 export const getObjValues = (obj) => {
-
+    return Object.values(obj);
 }
 
 /*
@@ -88,7 +91,7 @@ export const getObjValues = (obj) => {
 */
 
 export const patchObj = (obj, updates) => {
-
+    return { ...obj, ...updates };
 }
 
 /*
@@ -98,7 +101,11 @@ export const patchObj = (obj, updates) => {
 */
 
 export const deleteItem = (arr, item) => {
-
+    const index = arr.indexOf(item);
+    if (index === -1) {
+        return [...arr];
+    }
+    return [...arr.slice(0, index), ...arr.slice(index + 1)];
 }
 
 /*
@@ -106,7 +113,7 @@ export const deleteItem = (arr, item) => {
 */
 
 export const multiplyByTwo = (arr) => {
-
+    return arr.map((num) => num * 2);
 }
 
 /*
@@ -121,7 +128,21 @@ export const multiplyByTwo = (arr) => {
 */
 
 export const getAssessments = (arr) => {
+    const result = { 5: 0, 4: 0, 3: 0, 2: 0 };
 
+    for (const count of arr) {
+        if (count === 10) {
+            result[5]++;
+        } else if (count >= 8) {
+            result[4]++;
+        } else if (count >= 5) {
+            result[3]++;
+        } else {
+            result[2]++;
+        }
+    }
+
+    return result;
 }
 
 /*
@@ -132,11 +153,14 @@ export const getAssessments = (arr) => {
 */
 
 export const hasBoolean = (arr) => {
-
+    return arr.some((item) => typeof item === "boolean");
 }
 
 export const isStringArray = (arr) => {
-
+    if (arr.length === 0) {
+        return false;
+    }
+    return arr.every((item) => typeof item === "string");
 }
 
 /*
@@ -149,7 +173,18 @@ export const isStringArray = (arr) => {
 */
 
 export const return2007 = (str) => {
+    const chars = str.replaceAll("в", "ф").replaceAll("В", "Ф").split("");
 
+    const result = chars.reduce((acc, char, index) => {
+        if (index % 2 === 0) {
+            acc.push(char.toUpperCase());
+        } else {
+            acc.push(char.toLowerCase());
+        }
+        return acc;
+    }, []);
+
+    return result.join("") + ":*";
 }
 
 
