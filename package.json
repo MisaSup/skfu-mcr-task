@@ -1,0 +1,25 @@
+{
+  "name": "skfu-mcr-task-clean",
+  "version": "1.0.0",
+  "description": "Учебный репозиторий с заданиями. Здесь описано, как сделать форк, настроить окружение и получать обновления заданий от преподавателя.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maxonpunk/skfu-mcr-task.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Maxonpunk/skfu-mcr-task/issues"
+  },
+  "homepage": "https://github.com/Maxonpunk/skfu-mcr-task#readme",
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
+}
