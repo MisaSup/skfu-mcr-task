@@ -1,20 +1,3 @@
-/*
-
-Intro:
-
-    As we introduced "type" to both User and Admin
-    it's now easier to distinguish between them.
-    Once object type checking logic was extracted
-    into separate functions isUser and isAdmin -
-    logPerson function got new type errors.
-
-Exercise:
-
-    Figure out how to help TypeScript understand types in
-    this situation and apply necessary fixes.
-
-*/
-
 interface User {
     type: 'user';
     name: string;
@@ -38,11 +21,11 @@ export const persons: Person[] = [
     { type: 'admin', name: 'Bruce Willis', age: 64, role: 'World saver' }
 ];
 
-export function isAdmin(person: Person) {
+export function isAdmin(person: Person): person is Admin {
     return person.type === 'admin';
 }
 
-export function isUser(person: Person) {
+export function isUser(person: Person): person is User {
     return person.type === 'user';
 }
 
@@ -57,13 +40,4 @@ export function logPerson(person: Person) {
     console.log(` - ${person.name}, ${person.age}, ${additionalInformation}`);
 }
 
-console.log('Admins:');
-persons.filter(isAdmin).forEach(logPerson);
-
-console.log();
-
-console.log('Users:');
-persons.filter(isUser).forEach(logPerson);
-
-// In case you are stuck:
-// https://www.typescriptlang.org/docs/handbook/2/narrowing.html#using-type-predicates
+persons.forEach(logPerson);

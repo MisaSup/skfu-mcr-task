@@ -1,22 +1,3 @@
-/*
-
-Intro:
-
-    Project grew and we ended up in a situation with
-    some users starting to have more influence.
-    Therefore, we decided to create a new person type
-    called PowerUser which is supposed to combine
-    everything User and Admin have.
-
-Exercise:
-
-    Define type PowerUser which should have all fields
-    from both User and Admin (except for type),
-    and also have type 'powerUser' without duplicating
-    all the fields in the code.
-
-*/
-
 interface User {
     type: 'user';
     name: string;
@@ -31,7 +12,7 @@ interface Admin {
     role: string;
 }
 
-type PowerUser = unknown;
+type PowerUser = Omit<User, 'type'> & Omit<Admin, 'type'> & { type: 'powerUser' };
 
 export type Person = User | Admin | PowerUser;
 
@@ -87,7 +68,3 @@ console.log();
 
 console.log('Power users:');
 persons.filter(isPowerUser).forEach(logPerson);
-
-// In case you are stuck:
-// https://www.typescriptlang.org/docs/handbook/utility-types.html
-// https://www.typescriptlang.org/docs/handbook/2/objects.html#intersection-types
