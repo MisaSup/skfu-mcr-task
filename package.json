@@ -4,10 +4,25 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "esbuild src/index.js --bundle --outfile=dist/index.js --format=esm",
-    "dev": "esbuild src/index.js --bundle --outfile=dist/index.js --format=esm --watch"
+    "build": "esbuild src/index.ts --bundle --outdir=dist --format=esm --loader:.css=css",
+    "dev": "esbuild src/index.ts --bundle --outfile=dist/index.js --format=esm --watch",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "esbuild": "^0.28.2"
-  }
+    "esbuild": "^0.28.2",
+    "typescript": "^7.0.2"
+  },
+  "description": "Учебный репозиторий с заданиями. Здесь описано, как сделать форк, настроить окружение и получать обновления заданий от преподавателя.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slavikk5090-sketch/skfu-mcr-task.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/slavikk5090-sketch/skfu-mcr-task/issues"
+  },
+  "homepage": "https://github.com/slavikk5090-sketch/skfu-mcr-task#readme"
 }
