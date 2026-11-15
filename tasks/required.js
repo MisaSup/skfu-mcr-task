@@ -8,7 +8,9 @@
 */
 
 export const helloWorld = () => {
-
+    const message = "Hello, World!";
+    console.log(message);
+    return message
 }
 
 /*
@@ -17,7 +19,7 @@ export const helloWorld = () => {
 */
 
 export const getString = (str) => {
-
+    return str;
 }
 
 /*
@@ -30,23 +32,24 @@ export const getString = (str) => {
 */
 
 export const getLength = (arr) => {
-
+    return arr.length;
 }
 
 export const getFirst = (arr) => {
-
+    return arr[0];
 }
 
 export const getLast = (arr) => {
-
+    return arr[arr.length - 1];
 }
 
 export const pushElement = (arr, elem) => {
-
+    arr.push(elem);
+    return arr;
 }
 
 export const popElement = (arr) => {
-
+    return arr.pop();
 }
 
 /*
@@ -65,7 +68,8 @@ export const popElement = (arr) => {
 */
 
 export const getAnimalDescription = (obj) => {
-
+    const { animal, legs, color} = obj;
+    return `The ${color} ${animal} has ${legs} legs`;
 }
 
 /*
@@ -73,11 +77,11 @@ export const getAnimalDescription = (obj) => {
 */
 
 export const getObjKeys = (obj) => {
-
+    return Object.keys(obj);
 }
 
 export const getObjValues = (obj) => {
-
+    return Object.values(obj);
 }
 
 /*
@@ -88,7 +92,7 @@ export const getObjValues = (obj) => {
 */
 
 export const patchObj = (obj, updates) => {
-
+    return { ...obj, ...updates};
 }
 
 /*
@@ -98,7 +102,9 @@ export const patchObj = (obj, updates) => {
 */
 
 export const deleteItem = (arr, item) => {
-
+    const index = arr.indexOf(item);
+    if (index === -1) return [...arr];
+    return [...arr.slice(0, index), ...arr.slice(index + 1)];
 }
 
 /*
@@ -106,7 +112,7 @@ export const deleteItem = (arr, item) => {
 */
 
 export const multiplyByTwo = (arr) => {
-
+    return arr.map((num) => num*2);
 }
 
 /*
@@ -121,7 +127,21 @@ export const multiplyByTwo = (arr) => {
 */
 
 export const getAssessments = (arr) => {
+    const result = {};
 
+    for (let i = 0; i < arr.length; i++){
+        const done = arr[i];
+        let grade = 2;
+        
+        if (done === 10) grade = 5;
+        else if (done >= 8) grade = 4;
+        else if (done >= 5) grade = 3;
+
+        if (result[grade] === undefined) result[grade] = 1;
+        else result[grade] = result[grade] + 1;
+    }
+
+    return result;
 }
 
 /*
@@ -132,11 +152,12 @@ export const getAssessments = (arr) => {
 */
 
 export const hasBoolean = (arr) => {
-
+    return arr.some((item) => typeof item === "boolean");
 }
 
 export const isStringArray = (arr) => {
-
+    if (arr.length === 0) return false;
+    return arr.every((item) => typeof item === "string");
 }
 
 /*
@@ -149,7 +170,21 @@ export const isStringArray = (arr) => {
 */
 
 export const return2007 = (str) => {
+    const chars = str.split("");
+    
+    const result = chars.reduce((acc, char, index) => {
+        let newChar = char;
+        
+        if (newChar === "В") newChar = "Ф";
+        if (newChar === "в") newChar = "ф";
 
+        if (index % 2 === 0) newChar = newChar.toUpperCase();
+        else newChar = newChar.toLowerCase();
+        
+        return acc + newChar;
+    }, "");
+    
+    return result + ":*";
 }
 
 
