@@ -16,9 +16,15 @@ Exercise:
 
 */
 
-export type User = unknown;
+// 1. Создаем интерфейс, описывающий структуру пользователя
+export interface User {
+    name: string;
+    age: number;
+    occupation: string;
+}
 
-export const users: unknown[] = [
+// 2. Заменяем unknown на User в массиве
+export const users: User[] = [
     {
         name: 'Max Mustermann',
         age: 25,
@@ -31,7 +37,8 @@ export const users: unknown[] = [
     }
 ];
 
-export function logPerson(user: unknown) {
+// 3. Заменяем unknown на User в аргументе функции
+export function logPerson(user: User) {
     console.log(` - ${user.name}, ${user.age}`);
 }
 
