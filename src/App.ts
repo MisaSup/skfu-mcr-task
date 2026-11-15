@@ -1,6 +1,6 @@
-import IpViewer from "./widgets/IpViewer/IpViewer.js";
+import IpViewer from "./widgets/IpViewer/IpViewer";
 
-const App = () => {
+const App = (): string => {
   return `
     <main class="app">
       <h1 class="app__title">Мой IP</h1>
