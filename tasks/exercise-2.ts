@@ -30,9 +30,11 @@ interface Admin {
     role: string;
 }
 
-export type Person = unknown;
+// 1. Создаем объединенный тип (Union Type)
+export type Person = User | Admin;
 
-export const persons: User[] /* <- Person[] */ = [
+// 2. Используем Person[] для массива
+export const persons: Person[] = [
     {
         name: 'Max Mustermann',
         age: 25,
@@ -55,11 +57,11 @@ export const persons: User[] /* <- Person[] */ = [
     }
 ];
 
-export function logPerson(user: User) {
-    console.log(` - ${user.name}, ${user.age}`);
+// 3. Используем Person для аргумента функции
+export function logPerson(person: Person) {
+    console.log(` - ${person.name}, ${person.age}`);
 }
 
 persons.forEach(logPerson);
-
 // In case you are stuck:
 // https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#union-types
