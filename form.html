@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Стать участником — 3D Выставка</title>
+    <link rel="icon" href="https://flaticon.com" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header>
+        <div class="header-container">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Blender_logo_no_text.svg/1280px-Blender_logo_no_text.svg.png" alt="3D Logo" class="logo">
+            <h1>Панель регистрации 3D-Авторов</h1>
+        </div>
+    </header>
+
+    <!-- Навигация -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html">Главная</a>
+            <a href="form.html" class="active">Стать участником</a>
+            <a href="profile.html">Мой Профиль</a>
+        </div>
+    </nav>
+
+    <!-- Основной контент (Форма в стиле Blender) -->
+    <main>
+        <section class="form-section">
+            <h2>Подача заявки на выставку</h2>
+            <p class="form-desc">Заполните технические параметры вашего 3D-проекта для включения в общую базу CGI-рекордов.</p>
+
+            <form action="#" method="POST" class="blender-form">
+                
+                <!-- 1. Текстовый инпут -->
+                <div class="form-group">
+                    <label for="author_name">Имя автора / Никнейм:</label>
+                    <input type="text" id="author_name" name="author_name" placeholder="Например, Maxonpunk" required>
+                </div>
+                
+                <!-- 2. Email -->
+                <div class="form-group">
+                    <label for="email">Контактный Email:</label>
+                    <input type="email" id="email" name="email" placeholder="render@art.com" required>
+                </div>
+                
+                <!-- 3. Пароль -->
+                <div class="form-group">
+                    <label for="password">Пароль для доступа к проекту:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                
+                <!-- 4. Число -->
+                <div class="form-group">
+                    <label for="polygons">Количество полигонов в сцене (в миллионах):</label>
+                    <input type="number" id="polygons" name="polygons" min="1" max="500" placeholder="Например, 15">
+                </div>
+                
+                <!-- 5. Дата -->
+                <div class="form-group">
+                    <label for="render_date">Дата финального рендера:</label>
+                    <input type="date" id="render_date" name="render_date">
+                </div>
+                
+                <!-- 6. Выпадающий список (Select) -->
+                <div class="form-group">
+                    <label for="software">Основной 3D софт:</label>
+                    <select id="software" name="software">
+                        <option value="blender">Blender 4.x</option>
+                        <option value="maya">Autodesk Maya</option>
+                        <option value="3dsmax">3ds Max</option>
+                        <option value="zbrush">ZBrush</option>
+                    </select>
+                </div>
+                
+                <!-- 7. Радио-кнопки (Radio) -->
+                <div class="form-group">
+                    <p class="radio-title">Основной движок визуализации (Рендерер):</p>
+                    <div class="radio-options">
+                        <label class="radio-label">
+                            <input type="radio" name="engine" value="cycles" checked> Cycles (Трассировка лучей)
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="engine" value="eevee"> Eevee (В реальном времени)
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- 8. Чекбокс (Checkbox) -->
+                <div class="form-group checkbox-group">
+                    <label class="custom-checkbox">
+                        <input type="checkbox" name="commercial_rules" required> 
+                        <span>Подтверждаю, что все ассеты и текстуры созданы лично мной или взяты по свободной лицензии</span>
+                    </label>
+                </div>
+                
+                <!-- 9. Текстовое поле (Textarea) -->
+                <div class="form-group">
+                    <label for="specifications">Техническая спецификация проекта:</label>
+                    <textarea id="specifications" name="specifications" rows="5" placeholder="Опишите конфигурацию рендер-фермы, использованные шейдеры, симуляции жидкостей или тканей..."></textarea>
+                </div>
+                
+                <!-- 10. Кнопки Отправить и Сбросить -->
+                <div class="form-actions">
+                    <input type="submit" value="Отправить на модерацию" class="btn-submit">
+                    <input type="reset" value="Очистить поля" class="btn-reset">
+                </div>
+
+            </form>
+        </section>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer>
+        <div class="footer-container">
+            <p>Панель управления 3D-Выставкой | Лабораторная работа по веб-разработке</p>
+        </div>
+    </footer>
+
+</body>
+</html>
