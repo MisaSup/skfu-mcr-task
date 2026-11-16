@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Анкета участника — Читальня</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <img src="logo.png" alt="Логотип Читальни" class="logo">
+    <nav class="main-nav">
+      <a href="index.html">Главная</a>
+      <a href="form.html" class="active">Анкета</a>
+      <a href="profile.html">Профиль</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <h1>Анкета участника</h1>
+    <p class="subtitle">Заполните поля ниже. Все данные используются только для организации встреч клуба.</p>
+
+    <form id="anketa-form" class="anketa-form" action="#" method="post">
+      <fieldset>
+        <legend>Личные данные</legend>
+
+        <label for="name">Имя *</label>
+        <input type="text" id="name" name="name" required placeholder="Как к вам обращаться"
+               value="Эсмурзиев Магомед Бекханович">
+
+        <label for="nickname">Прозвище / ник</label>
+        <input type="text" id="nickname" name="nickname" placeholder="Необязательно">
+
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required placeholder="you@example.com"
+               value="esmurzievmagomed60@gmail.com">
+
+        <label for="password">Пароль *</label>
+        <input type="password" id="password" name="password" required minlength="6" placeholder="Минимум 6 символов">
+
+        <label for="age">Возраст</label>
+        <input type="number" id="age" name="age" min="14" max="120" placeholder="18"
+               value="18">
+
+        <label for="birthdate">Дата рождения</label>
+        <input type="date" id="birthdate" name="birthdate">
+      </fieldset>
+
+      <fieldset>
+        <legend>Литературные предпочтения</legend>
+
+        <label for="genre">Любимый жанр</label>
+        <select id="genre" name="genre">
+          <option value="">— выберите —</option>
+          <option value="fantasy">Фэнтези</option>
+          <option value="scifi">Научная фантастика</option>
+          <option value="detective">Детектив</option>
+          <option value="classic">Классика</option>
+          <option value="nonfiction">Нон-фикшн</option>
+          <option value="other">Другое</option>
+        </select>
+
+        <p class="label-text">Формат встреч:</p>
+        <div class="radio-group">
+          <label><input type="radio" name="format" value="offline" checked> Офлайн</label>
+          <label><input type="radio" name="format" value="online"> Онлайн</label>
+          <label><input type="radio" name="format" value="hybrid"> Гибрид</label>
+        </div>
+
+        <p class="label-text">Что вам интересно? (можно несколько)</p>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="interest" value="discussion"> Обсуждения книг</label>
+          <label><input type="checkbox" name="interest" value="lectures"> Лекции</label>
+          <label><input type="checkbox" name="interest" value="exchanges"> Книгообмен</label>
+          <label><input type="checkbox" name="interest" value="trips"> Литературные прогулки</label>
+        </div>
+
+        <label for="about">Немного о себе</label>
+        <textarea id="about" name="about" rows="4" placeholder="Расскажите о любимых книгах или о себе"></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>Согласие</legend>
+        <label class="checkbox-label">
+          <input type="checkbox" name="consent" required>
+          Я согласен на обработку персональных данных *
+        </label>
+      </fieldset>
+
+      <div class="form-actions">
+        <button type="submit" class="btn">Отправить</button>
+        <button type="reset" class="btn btn-secondary">Сбросить</button>
+      </div>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <img src="logo.png" alt="Логотип" class="footer-logo">
+    <nav class="footer-nav">
+      <a href="index.html">Главная</a>
+      <a href="form.html">Анкета</a>
+      <a href="profile.html">Профиль</a>
+    </nav>
+    <p class="contact">Связь: esmurzievmagomed60@gmail.com</p>
+    <p class="copyright">© 2025 Эсмурзиев Магомед Бекханович</p>
+  </footer>
+</body>
+</html>
