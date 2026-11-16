@@ -16,24 +16,31 @@ const IpViewer: Component = () => {
   `;
 };
 
-export const setupIpViewer = (root: HTMLElement) => {
+export const setupIpViewer = (root: HTMLElement) => { // Оставляем твой root
   const button = root.querySelector<HTMLButtonElement>('[data-ip-show]');
   const result = root.querySelector<HTMLElement>('[data-ip-result]');
 
   if (!button || !result) return;
 
   button.addEventListener('click', async () => {
+    // Состояние Loading
     result.innerHTML = Spinner();
-    result.classList.remove('ip-viewer__result_error');
+    result.classList.remove('ip-viewer__result--success', 'ip-viewer__result--error');
+    result.classList.add('ip-viewer__result--loading');
     button.disabled = true;
 
     try {
       const ip = await getIpApi();
       
+      // Состояние Success
       result.textContent = `Ваш IP: ${ip}`;
+      result.classList.remove('ip-viewer__result--loading');
+      result.classList.add('ip-viewer__result--success');
     } catch (error) {
-      result.textContent = 'Произошла ошибка при загрузке IP. Попробуйте позже.';
-      result.classList.add('ip-viewer__result_error');
+      // Состояние Error
+      result.textContent = 'Не удалось загрузить IP. Попробуйте позже.';
+      result.classList.remove('ip-viewer__result--loading');
+      result.classList.add('ip-viewer__result--error');
     } finally {
       button.disabled = false;
     }

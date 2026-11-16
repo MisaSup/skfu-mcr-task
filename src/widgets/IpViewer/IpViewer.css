@@ -36,3 +36,11 @@
 .ip-viewer__button:active {
   transform: scale(0.98);
 }
+
+.ip-viewer__result--success {
+  color: #22c55e; /* Зеленый цвет для успеха */
+}
+
+.ip-viewer__result--error {
+  color: #ef4444; /* Красный цвет для ошибки */
+}
