@@ -1,0 +1,386 @@
+/* Базовые настройки под мобильный экран 430×932 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  background: #f5f2ed;
+  color: #2c2c2c;
+  line-height: 1.5;
+  max-width: 430px;
+  min-height: 932px;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Хедер */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: #3e5c4b;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  height: 36px;
+  width: auto;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.main-nav {
+  display: flex;
+  gap: 12px;
+}
+
+.main-nav a {
+  color: #e8f0ea;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+
+.main-nav a.active,
+.main-nav a:hover {
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+}
+
+/* Основной контент */
+.page {
+  flex: 1;
+  padding: 20px 16px 32px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 12px;
+  color: #3e5c4b;
+}
+
+.lead {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.hero-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.hero-card h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #3e5c4b;
+}
+
+.info-block {
+  margin-bottom: 24px;
+}
+
+.info-block h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #3e5c4b;
+}
+
+.info-block ol {
+  padding-left: 20px;
+}
+
+.info-block li {
+  margin-bottom: 6px;
+}
+
+.illustration {
+  text-align: center;
+}
+
+.placeholder-img {
+  width: 100%;
+  height: 180px;
+  background: #d9e2dc;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #5a7a66;
+  margin-bottom: 8px;
+}
+
+figcaption {
+  font-size: 13px;
+  color: #777;
+}
+
+/* Кнопки */
+.btn {
+  display: inline-block;
+  background: #3e5c4b;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background: #2f4639;
+}
+
+.btn-secondary {
+  background: #8a9a8f;
+}
+
+.btn-secondary:hover {
+  background: #6f8075;
+}
+
+/* Форма */
+.anketa-form fieldset {
+  border: 1px solid #d0d8d3;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 20px;
+  background: #fff;
+}
+
+legend {
+  font-weight: 600;
+  color: #3e5c4b;
+  padding: 0 6px;
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #c5cfc9;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: inherit;
+  background: #fafbfa;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #3e5c4b;
+  border-color: transparent;
+}
+
+.radio-group,
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.radio-group label,
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 400;
+  margin-top: 0;
+}
+
+.label-text {
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-weight: 400;
+  margin-top: 0;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.form-actions .btn {
+  flex: 1;
+}
+
+/* Профиль */
+.profile-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #d9e2dc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  margin: 0 auto 12px;
+}
+
+.profile-card h2 {
+  font-size: 20px;
+  color: #3e5c4b;
+}
+
+.profile-meta {
+  font-size: 13px;
+  color: #888;
+  margin-top: 4px;
+}
+
+.profile-section {
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.profile-section h3 {
+  font-size: 16px;
+  color: #3e5c4b;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #e8ece9;
+  padding-bottom: 8px;
+}
+
+.data-list {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 8px 12px;
+  font-size: 14px;
+}
+
+.data-list dt {
+  color: #777;
+}
+
+.data-list dd {
+  color: #2c2c2c;
+}
+
+.password-form label {
+  margin-top: 10px;
+}
+
+.password-form .btn {
+  margin-top: 14px;
+  width: 100%;
+}
+
+.message {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.message.success {
+  color: #2e7d4f;
+}
+
+.message.error {
+  color: #b33a3a;
+}
+
+/* Футер */
+.site-footer {
+  background: #3e5c4b;
+  color: #e8f0ea;
+  padding: 20px 16px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.footer-logo {
+  height: 30px;
+  width: auto;
+  border-radius: 4px;
+  background: #fff;
+  margin-bottom: 10px;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+
+.footer-nav a {
+  color: #e8f0ea;
+  text-decoration: none;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
+}
+
+.contact {
+  margin-bottom: 6px;
+}
+
+.copyright {
+  opacity: 0.7;
+}
+
+/* Скрытие сообщения по умолчанию */
+.message:empty {
+  display: none;
+}
+
+.club-photo {
+  width: 100%;
+  max-width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto 8px;
+}
