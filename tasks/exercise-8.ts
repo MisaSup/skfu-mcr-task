@@ -21,7 +21,7 @@ Intro:
 
 Exercise:
 
-    Remove UsersApiResponse and AdminsApiResponse types
+    Remove ApiResponse<User[]> and ApiResponse<Admin[]> types
     and use generic type ApiResponse in order to specify API
     response formats for each of the functions.
 
@@ -53,7 +53,7 @@ const users: User[] = [
     { type: 'user', name: 'Kate Müller', age: 23, occupation: 'Astronaut' }
 ];
 
-export type ApiResponse<T> = unknown;
+export type ApiResponse<T> = { status: 'success'; data: T } | { status: 'error'; error: string };
 
 type AdminsApiResponse = (
     {
@@ -91,14 +91,14 @@ export function requestUsers(callback: (response: UsersApiResponse) => void) {
     });
 }
 
-export function requestCurrentServerTime(callback: (response: unknown) => void) {
+export function requestCurrentServerTime(callback: (response: ApiResponse<number>) => void) {
     callback({
         status: 'success',
         data: Date.now()
     });
 }
 
-export function requestCoffeeMachineQueueLength(callback: (response: unknown) => void) {
+export function requestCoffeeMachineQueueLength(callback: (response: ApiResponse<number>) => void) {
     callback({
         status: 'error',
         error: 'Numeric value has exceeded Number.MAX_SAFE_INTEGER.'
