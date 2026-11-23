@@ -1,0 +1,11 @@
+import type { Component } from "../shared/lib/components/types.js";
+
+export const Header: Component = () => {
+    const header = document.createElement("header");
+    header.className = "site-header";
+    header.innerHTML = `
+        <img src="https://icons8.com" alt="Logo" class="logo">
+        <h1>Mortis Club</h1>
+    `;
+    return header;
+};
