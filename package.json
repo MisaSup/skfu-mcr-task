@@ -1,0 +1,14 @@
+{
+  "name": "cat-01-ip-viewer",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "esbuild src/index.ts --bundle --outfile=dist/index.js --format=esm",
+    "dev": "esbuild src/index.ts --bundle --outfile=dist/index.js --format=esm --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.0",
+    "typescript": "^5.7.0"
+  }
+}
