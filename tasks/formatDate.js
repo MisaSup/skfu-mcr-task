@@ -1,25 +1,15 @@
-/*
-    task-formatDate
-    Напишите функцию formatDate(date, formatString), которая принимает дату и
-    строку-шаблон и заменяет маркеры на реальные значения даты.
-
-    Поддерживаемые маркеры:
-    - YYYY — год (4 цифры)
-    - MM   — месяц (01-12, с ведущим нулём)
-    - DD   — день (01-31, с ведущим нулём)
-    - HH   — часы (00-23, с ведущим нулём)
-    - mm   — минуты (00-59, с ведущим нулём)
-
-    Пример:
-    formatDate(new Date(2026, 9, 22, 14, 5), 'DD.MM.YYYY at HH:mm')
-    -> "22.10.2026 at 14:05"
-
-    Подсказки:
-    - ГЛАВНАЯ ловушка JS: getMonth() возвращает 0-11, поэтому прибавляйте 1
-    - для ведущих нулей используйте String.prototype.padStart(2, '0')
-    - замену удобно делать через String.prototype.replace()
-*/
-
 export const formatDate = (date, formatString) => {
+    const d = new Date(date);
+    const YYYY = String(d.getFullYear());
+    const MM = String(d.getMonth() + 1).padStart(2, "0");
+    const DD = String(d.getDate()).padStart(2, "0");
+    const HH = String(d.getHours()).padStart(2, "0");
+    const mm = String(d.getMinutes()).padStart(2, "0");
 
-}
+    return formatString
+        .replaceAll("YYYY", YYYY)
+        .replaceAll("MM", MM)
+        .replaceAll("DD", DD)
+        .replaceAll("HH", HH)
+        .replaceAll("mm", mm);
+};

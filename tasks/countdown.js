@@ -1,25 +1,14 @@
-/*
-    task-countdown
-    Напишите функцию getCountdown(futureDate), которая принимает дату в будущем
-    и возвращает объект с оставшимся временем:
-
-    {
-        days: 2,
-        hours: 5,
-        minutes: 14,
-        seconds: 33
+export const getCountdown = (futureDate) => {
+    const diff = new Date(futureDate).getTime() - Date.now();
+    if (diff <= 0) {
+        return { days: 0, hours: 0, minutes: 0, seconds: 0 };
     }
 
-    Если дата уже прошла — вернуть объект с нулями:
-    { days: 0, hours: 0, minutes: 0, seconds: 0 }
+    const totalSeconds = Math.floor(diff / 1000);
+    const days = Math.floor(totalSeconds / (24 * 3600));
+    const hours = Math.floor((totalSeconds % (24 * 3600)) / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = totalSeconds % 60;
 
-    Подсказки:
-    - разница в миллисекундах: futureDate - Date.now()
-    - в сутках 24 часа, в часе 60 минут, в минуте 60 секунд
-    - для "извлечения" остатка используйте оператор % (остаток от деления)
-    - значения должны быть целыми (Math.floor)
-*/
-
-export const getCountdown = (futureDate) => {
-
-}
+    return { days, hours, minutes, seconds };
+};
