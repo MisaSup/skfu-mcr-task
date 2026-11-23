@@ -1,0 +1,118 @@
+TAP version 13
+# Subtest: getCountdown: full breakdown
+ok 1 - getCountdown: full breakdown
+  ---
+  duration_ms: 1.325043
+  type: 'test'
+  ...
+# Subtest: getCountdown: single units
+ok 2 - getCountdown: single units
+  ---
+  duration_ms: 3.580481
+  type: 'test'
+  ...
+# Subtest: getCountdown: floors partial units
+ok 3 - getCountdown: floors partial units
+  ---
+  duration_ms: 0.212899
+  type: 'test'
+  ...
+# Subtest: getCountdown: hours do not exceed 23
+ok 4 - getCountdown: hours do not exceed 23
+  ---
+  duration_ms: 0.135754
+  type: 'test'
+  ...
+# Subtest: getCountdown: past date returns zeros
+ok 5 - getCountdown: past date returns zeros
+  ---
+  duration_ms: 0.157816
+  type: 'test'
+  ...
+# Subtest: formatDate: full pattern
+ok 6 - formatDate: full pattern
+  ---
+  duration_ms: 0.792604
+  type: 'test'
+  ...
+# Subtest: formatDate: pads single digit values
+ok 7 - formatDate: pads single digit values
+  ---
+  duration_ms: 0.129404
+  type: 'test'
+  ...
+# Subtest: formatDate: month is zero-based in Date
+ok 8 - formatDate: month is zero-based in Date
+  ---
+  duration_ms: 0.586432
+  type: 'test'
+  ...
+# Subtest: formatDate: individual markers
+ok 9 - formatDate: individual markers
+  ---
+  duration_ms: 0.132117
+  type: 'test'
+  ...
+# Subtest: formatDate: replaces every occurrence
+ok 10 - formatDate: replaces every occurrence
+  ---
+  duration_ms: 0.101455
+  type: 'test'
+  ...
+# Subtest: formatDate: leaves unknown text untouched
+ok 11 - formatDate: leaves unknown text untouched
+  ---
+  duration_ms: 0.085908
+  type: 'test'
+  ...
+# Subtest: formatTimeAgo: just now
+ok 12 - formatTimeAgo: just now
+  ---
+  duration_ms: 1.004639
+  type: 'test'
+  ...
+# Subtest: formatTimeAgo: minutes ago
+ok 13 - formatTimeAgo: minutes ago
+  ---
+  duration_ms: 3.538047
+  type: 'test'
+  ...
+# Subtest: formatTimeAgo: hours ago
+ok 14 - formatTimeAgo: hours ago
+  ---
+  duration_ms: 0.182252
+  type: 'test'
+  ...
+# Subtest: formatTimeAgo: yesterday
+ok 15 - formatTimeAgo: yesterday
+  ---
+  duration_ms: 0.182959
+  type: 'test'
+  ...
+# Subtest: formatTimeAgo: days ago
+ok 16 - formatTimeAgo: days ago
+  ---
+  duration_ms: 0.214467
+  type: 'test'
+  ...
+# Subtest: formatTimeAgo: older than 7 days uses DD.MM.YYYY
+ok 17 - formatTimeAgo: older than 7 days uses DD.MM.YYYY
+  ---
+  duration_ms: 0.280806
+  type: 'test'
+  ...
+# Subtest: formatTimeAgo: accepts a timestamp
+ok 18 - formatTimeAgo: accepts a timestamp
+  ---
+  duration_ms: 0.220768
+  type: 'test'
+  ...
+1..18
+# tests 18
+# suites 0
+# pass 18
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 56.347145
